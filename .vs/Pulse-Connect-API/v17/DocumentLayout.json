@@ -1,12 +1,122 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse-Connect-API\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\pulse-connect-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\pulse-connect-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\UserRole.cs",
+              "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\UserRole.cs",
+              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\UserRole.cs",
+              "RelativeToolTip": "Pulse-Connect-API\\Models\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T22:01:58.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\User.cs",
+              "RelativeToolTip": "Pulse-Connect-API\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T21:56:49.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\appsettings.json",
+              "RelativeDocumentMoniker": "Pulse-Connect-API\\appsettings.json",
+              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\appsettings.json",
+              "RelativeToolTip": "Pulse-Connect-API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-27T21:54:16.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Program.cs",
+              "RelativeDocumentMoniker": "Pulse-Connect-API\\Program.cs",
+              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Program.cs",
+              "RelativeToolTip": "Pulse-Connect-API\\Program.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T21:46:15.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pulse-Connect-API",
+              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Pulse-Connect-API.csproj",
+              "RelativeDocumentMoniker": "Pulse-Connect-API\\Pulse-Connect-API.csproj",
+              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Pulse-Connect-API.csproj",
+              "RelativeToolTip": "Pulse-Connect-API\\Pulse-Connect-API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-27T21:29:04.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Pulse-Connect-API\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Pulse-Connect-API\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T21:32:51.445Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

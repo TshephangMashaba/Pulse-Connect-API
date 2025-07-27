@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Pulse-Connect-API.props" />
+</Project>

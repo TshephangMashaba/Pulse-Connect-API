@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "a14iF9DhgHF5KEuro9hsNVlbpC13eqSKzkr/QiDhIKU=",
+  "Source": "Pulse-Connect-API",
+  "BasePath": "_content/Pulse-Connect-API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
