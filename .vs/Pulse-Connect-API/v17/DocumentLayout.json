@@ -46,8 +46,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Models\\UserRole.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T22:01:58.561Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T22:01:58.561Z"
             },
             {
               "$type": "Document",
@@ -57,7 +56,7 @@
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\User.cs",
               "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\User.cs",
               "RelativeToolTip": "Pulse-Connect-API\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-27T21:56:49.696Z",
               "EditorCaption": ""
@@ -72,8 +71,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-27T21:54:16.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T21:54:16.844Z"
             },
             {
               "$type": "Document",
@@ -85,21 +83,19 @@
               "RelativeToolTip": "Pulse-Connect-API\\Program.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T21:46:15.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T21:46:15.312Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Pulse-Connect-API",
+              "Title": "Pulse-Connect-API.csproj",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Pulse-Connect-API.csproj",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Pulse-Connect-API.csproj",
               "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Pulse-Connect-API.csproj",
               "RelativeToolTip": "Pulse-Connect-API\\Pulse-Connect-API.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-27T21:29:04.142Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T21:29:04.142Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T21:32:51.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T21:32:51.445Z"
             }
           ]
         }
