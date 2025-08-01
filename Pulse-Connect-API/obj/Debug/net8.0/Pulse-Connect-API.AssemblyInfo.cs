@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pulse-Connect-API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b824ef6a4291695e85ff547b30255be5b5d9245e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86a271178dde23ce91305f2e7d7a088efdf398d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pulse-Connect-API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pulse-Connect-API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -35,9 +35,4 @@
     <PackageReference Include="System.Drawing.Common" Version="8.0.15" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DTO\" />
-    <Folder Include="SeedConfigurations\" />
-  </ItemGroup>
-
 </Project>

@@ -1,14 +1,19 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Pulse_Connect_API;
 using Pulse_Connect_API.Data;
-using System.Data;
+using Pulse_Connect_API.Services;
+using Pulse_Connect_API.Models;
+using Pulse_Connect_API.Services;
 using System.Net;
 using System.Net.Mail;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.IdentityModel.JsonWebTokens;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -18,12 +23,12 @@ builder.Services.AddControllers();
 
 // FluentEmail Configuration
 builder.Services
-    .AddFluentEmail("pulseconnect@gmail.com", "Pulse Connect") // sender email
+    .AddFluentEmail("pulseconnecthub@gmail.com", "Pulse Connect") // sender email
     .AddRazorRenderer()
     .AddSmtpSender(new SmtpClient("in-v3.mailjet.com")
     {
         Port = 587,
-        Credentials = new NetworkCredential("7557cb9c7919dc52300940f6c26e3b35", "139962730f603eb6292ee14029242224"),
+        Credentials = new NetworkCredential("88f1ecc2ce8737e8437c1a74e503f802", "b65d276ba8c9abc73e4e51714cd947a0"),
         EnableSsl = true
     });
 
@@ -78,8 +83,18 @@ builder.Services.AddSwaggerGen(c =>
                     });
 });
 
+builder.Services.AddControllers();
 
 
+// With this corrected code:  
+builder.Services.AddAutoMapper(cfg =>
+{
+    cfg.AddProfile<MappingProfile>();
+});
+builder.Services.AddControllers();
+
+
+builder.Services.AddScoped<JwtHandler>();
 
 builder.Services.AddIdentity<User, Role>(options =>
 {
@@ -94,7 +109,6 @@ builder.Services.AddIdentity<User, Role>(options =>
 
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 var key = jwtSettings["securityKey"];
-
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -111,26 +125,13 @@ builder.Services.AddAuthentication(options =>
         ValidIssuer = jwtSettings["Issuer"],
         ValidAudience = jwtSettings["Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key!)),
-        ClockSkew = TimeSpan.Zero, // optional: removes 5-min default clock skew
-        NameClaimType = ClaimTypes.Name, // 👈 ensures Identity.Name is set properly
-
-    };
-
-    options.Events = new JwtBearerEvents
-    {
-        OnAuthenticationFailed = context =>
-        {
-            Console.WriteLine(" JWT Authentication failed:");
-            Console.WriteLine(context.Exception.Message);
-            return System.Threading.Tasks.Task.CompletedTask;
-        },
-        OnTokenValidated = context =>
-        {
-            Console.WriteLine($" JWT Validated for user: {context.Principal?.Identity?.Name}");
-            return System.Threading.Tasks.Task.CompletedTask;
-        }
+        // Map to your actual token claims:
+        NameClaimType = "email",       // Matches your JwtRegisteredClaimNames.Email
+        RoleClaimType = "role",        // Matches your custom role claim
+        ClockSkew = TimeSpan.Zero      // Remove default 5-minute leeway
     };
 });
+
 
 
 //Database Connection String
@@ -145,7 +146,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         )
     ));
 
-
+builder.Services.AddMemoryCache();
 
 // Add services to the container.
 
@@ -163,8 +164,18 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.Use(async (context, next) =>
+{
+    var authHeader = context.Request.Headers["Authorization"].FirstOrDefault();
+    Console.WriteLine($"Auth Header: {authHeader}");
 
+    await next();
+
+    Console.WriteLine($"Response Status: {context.Response.StatusCode}");
+});
+
+app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
