@@ -14,6 +14,8 @@ namespace Pulse_Connect_API.Models
         public string Race { get; set; }
         public string Gender { get; set; }
     }
+
+
     
 }
 

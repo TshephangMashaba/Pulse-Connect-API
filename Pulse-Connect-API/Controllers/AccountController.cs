@@ -8,7 +8,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Pulse_Connect_API.DTO;
 using Pulse_Connect_API.Models;
-using Pulse_Connect_API.Services;
+using Pulse_Connect_API.Service;
 using System.Net;
 using System.Security.Claims;
 using System.Text;
@@ -19,30 +19,30 @@ namespace Pulse_Connect_API.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly UserManager<User> _userManager;
-        private readonly IMapper _mapper;
-        private readonly JwtHandler _jwtHandler;
-        private readonly IMemoryCache _cache;
-        private readonly IFluentEmail _emailSender;
+    private readonly UserManager<User> _userManager;
+    private readonly IMapper _mapper;
+    private readonly JwtService _jwtService; // Changed from JwtHandler to JwtService
+    private readonly IMemoryCache _cache;
+    private readonly IFluentEmail _emailSender;
 
-        public AccountController(
-            UserManager<User> userManager,
-            IMapper mapper,
-            JwtHandler jwtHandler,
-            IMemoryCache cache,
-            IFluentEmail emailSender)
-        {
-            _userManager = userManager;
-            _mapper = mapper;
-            _jwtHandler = jwtHandler;
-            _cache = cache;
-            _emailSender = emailSender;
-        }
+    public AccountController(
+        UserManager<User> userManager,
+        IMapper mapper,
+        JwtService jwtService, // Changed from JwtHandler to JwtService
+        IMemoryCache cache,
+        IFluentEmail emailSender)
+    {
+        _userManager = userManager;
+        _mapper = mapper;
+        _jwtService = jwtService; // Changed from _jwtHandler to _jwtService
+        _cache = cache;
+        _emailSender = emailSender;
+    }
 
-        /// <summary>
-        /// Registers a new user for Pulse Connect
-        /// </summary>
-        [HttpPost("register")]
+    /// <summary>
+    /// Registers a new user for Pulse Connect
+    /// </summary>
+    [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserRegistrationDTO request)
         {
             try
@@ -117,6 +117,9 @@ namespace Pulse_Connect_API.Controllers
         /// <summary>
         /// Authenticates a user and generates JWT token
         /// </summary>
+        /// <summary>
+        /// Authenticates a user and generates JWT token
+        /// </summary>
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLoginDTO request)
         {
@@ -127,43 +130,22 @@ namespace Pulse_Connect_API.Controllers
             if (user == null || !await _userManager.CheckPasswordAsync(user, request.Password))
                 return Unauthorized(new AuthResponseDTO { ErrorMessage = "Invalid email or password" });
 
-            // Generate OTP for 2FA
-            var otp = new Random().Next(100000, 999999).ToString();
-            var cacheKey = $"OTP_{user.Email}";
-            _cache.Set(cacheKey, otp, TimeSpan.FromMinutes(5)); // OTP valid for 5 minutes
+            // Get user roles and generate token directly
+            var roles = await _userManager.GetRolesAsync(user);
+            var token = _jwtService.GenerateToken(user, roles);
 
-            // Send OTP email
+            // Send login notification email instead of OTP
             var emailBody = $@"
-                <h2>Pulse Connect Login Verification</h2>
-                <p>Hello {user.FirstName},</p>
-                <p>Your verification code is: <strong>{otp}</strong></p>
-                <p>This code will expire in 5 minutes.</p>
-                <p>If you didn't request this, please ignore this email.</p>";
+        <h2>Pulse Connect Login Notification</h2>
+        <p>Hello {user.FirstName},</p>
+        <p>Your account was successfully logged in at {DateTime.Now.ToString("f")}.</p>
+        <p>If this wasn't you, please contact our support team immediately.</p>";
 
             await _emailSender
                 .To(user.Email)
-                .Subject("Your Pulse Connect Verification Code")
+                .Subject("Pulse Connect Login Notification")
                 .Body(emailBody, isHtml: true)
                 .SendAsync();
-
-            return Ok(new { Message = "OTP sent to email", Email = user.Email });
-        }
-
-        /// <summary>
-        /// Verifies OTP and returns JWT token
-        /// </summary>
-        [HttpPost("verify-otp")]
-        public async Task<IActionResult> VerifyOtp([FromBody] VerifyOtpDTO request)
-        {
-            var cacheKey = $"OTP_{request.Email}";
-            if (!_cache.TryGetValue(cacheKey, out string? cachedOtp) || cachedOtp != request.Otp)
-                return Unauthorized(new AuthResponseDTO { ErrorMessage = "Invalid or expired OTP" });
-
-            var user = await _userManager.FindByEmailAsync(request.Email);
-            var roles = await _userManager.GetRolesAsync(user);
-            var token = _jwtHandler.GenerateToken(user, roles);
-
-            _cache.Remove(cacheKey); // Clear OTP after successful verification
 
             return Ok(new AuthResponseDTO
             {
@@ -180,6 +162,12 @@ namespace Pulse_Connect_API.Controllers
                 }
             });
         }
+
+        // Remove the VerifyOtp endpoint completely
+        /// <summary>
+        /// Verifies OTP and returns JWT token
+        /// </summary>
+
 
         /// <summary>
         /// Handles password reset requests
@@ -262,10 +250,9 @@ namespace Pulse_Connect_API.Controllers
         public async Task<IActionResult> GetProfile()
         {
             // Get user from the token claims
-            var userId = User.FindFirst(JwtRegisteredClaimNames.Sub)?.Value;
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (string.IsNullOrEmpty(userId))
-                return Unauthorized();
-
+                return Unauthorized("Invalid or missing user ID in token");
 
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
@@ -287,7 +274,6 @@ namespace Pulse_Connect_API.Controllers
                 Roles = roles
             });
         }
-
         /// <summary>
         /// Updates user profile
         /// </summary>
