@@ -1,12 +1,846 @@
 {
   "Version": 1,
-  "Hash": "a14iF9DhgHF5KEuro9hsNVlbpC13eqSKzkr/QiDhIKU=",
+  "Hash": "f4O2+n12xGPgk4dzE1FgzTNne1Oz8RH+VT5Lv2QXu2Q=",
   "Source": "Pulse-Connect-API",
   "BasePath": "_content/Pulse-Connect-API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Pulse-Connect-API\\wwwroot",
+      "Source": "Pulse-Connect-API",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\profile-pictures\\a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "profile-pictures/a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1o1z32yct0",
+      "Integrity": "MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile-pictures\\a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.png",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t9zgc7pddx",
+      "Integrity": "bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.png"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m26q6fpd7w",
+      "Integrity": "wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t9zgc7pddx",
+      "Integrity": "bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.png",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t9zgc7pddx",
+      "Integrity": "bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.png"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.png",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t9zgc7pddx",
+      "Integrity": "bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.png"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "h2tik0t615",
+      "Integrity": "qUdthj2AWCNoXdXJhiJdQG2OQmuBhzhxaUJTWNFwLCo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.png",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t9zgc7pddx",
+      "Integrity": "bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "profile-pictures/a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.1o1z32yct0.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\profile-pictures\\a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "789790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 09 Sep 2025 20:48:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1o1z32yct0"
+        },
+        {
+          "Name": "label",
+          "Value": "profile-pictures/a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U="
+        }
+      ]
+    },
+    {
+      "Route": "profile-pictures/a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\profile-pictures\\a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "789790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 09 Sep 2025 20:48:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 23:54:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.t9zgc7pddx.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 23:54:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9zgc7pddx"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:14:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.m26q6fpd7w.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:14:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m26q6fpd7w"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 23:58:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.t9zgc7pddx.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 23:58:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9zgc7pddx"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:14:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.t9zgc7pddx.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:14:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9zgc7pddx"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 23:55:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.t9zgc7pddx.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 23:55:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9zgc7pddx"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c.h2tik0t615.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10718"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qUdthj2AWCNoXdXJhiJdQG2OQmuBhzhxaUJTWNFwLCo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:15:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h2tik0t615"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qUdthj2AWCNoXdXJhiJdQG2OQmuBhzhxaUJTWNFwLCo="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10718"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qUdthj2AWCNoXdXJhiJdQG2OQmuBhzhxaUJTWNFwLCo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:15:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qUdthj2AWCNoXdXJhiJdQG2OQmuBhzhxaUJTWNFwLCo="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:04:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.t9zgc7pddx.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:04:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9zgc7pddx"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    }
+  ]
 }

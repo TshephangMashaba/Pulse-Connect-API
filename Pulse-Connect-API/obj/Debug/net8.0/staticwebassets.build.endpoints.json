@@ -1,5 +1,662 @@
 {
   "Version": 1,
   "ManifestType": "Build",
-  "Endpoints": []
+  "Endpoints": [
+    {
+      "Route": "profile-pictures/a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.1o1z32yct0.png",
+      "AssetFile": "profile-pictures/a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "789790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 09 Sep 2025 20:48:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1o1z32yct0"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U="
+        },
+        {
+          "Name": "label",
+          "Value": "profile-pictures/a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png"
+        }
+      ]
+    },
+    {
+      "Route": "profile-pictures/a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png",
+      "AssetFile": "profile-pictures/a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "789790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 09 Sep 2025 20:48:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.png",
+      "AssetFile": "uploads/21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 23:54:46 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.t9zgc7pddx.png",
+      "AssetFile": "uploads/21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 23:54:46 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9zgc7pddx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.png"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "AssetFile": "uploads/22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:14:48 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.m26q6fpd7w.jpg",
+      "AssetFile": "uploads/22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:14:48 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m26q6fpd7w"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png",
+      "AssetFile": "uploads/4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 23:58:02 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.t9zgc7pddx.png",
+      "AssetFile": "uploads/4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 23:58:02 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9zgc7pddx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.png",
+      "AssetFile": "uploads/6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:14:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.t9zgc7pddx.png",
+      "AssetFile": "uploads/6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:14:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9zgc7pddx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.png"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.png",
+      "AssetFile": "uploads/ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 23:55:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.t9zgc7pddx.png",
+      "AssetFile": "uploads/ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 23:55:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9zgc7pddx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.png"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c.h2tik0t615.jpg",
+      "AssetFile": "uploads/e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10718"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qUdthj2AWCNoXdXJhiJdQG2OQmuBhzhxaUJTWNFwLCo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:15:20 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h2tik0t615"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qUdthj2AWCNoXdXJhiJdQG2OQmuBhzhxaUJTWNFwLCo="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c.jpg",
+      "AssetFile": "uploads/e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10718"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qUdthj2AWCNoXdXJhiJdQG2OQmuBhzhxaUJTWNFwLCo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:15:20 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qUdthj2AWCNoXdXJhiJdQG2OQmuBhzhxaUJTWNFwLCo="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.png",
+      "AssetFile": "uploads/eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:04:18 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.t9zgc7pddx.png",
+      "AssetFile": "uploads/eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 08 Sep 2025 17:04:18 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9zgc7pddx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.png"
+        }
+      ]
+    }
+  ]
 }

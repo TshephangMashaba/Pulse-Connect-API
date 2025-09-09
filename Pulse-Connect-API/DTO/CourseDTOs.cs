@@ -27,7 +27,6 @@
     {
         public string Title { get; set; }
         public string Content { get; set; }
-        public int Order { get; set; }
         public string MediaUrl { get; set; }
         public string MediaType { get; set; }
     }
@@ -94,5 +93,22 @@
     {
         public string QuestionId { get; set; }
         public string SelectedOptionId { get; set; }
+    }
+
+
+    public class CreateTestBasicDTO
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public int PassingScore { get; set; }
+    }
+
+    public class CourseTestDTO
+    {
+        public string Id { get; set; }
+        public string CourseId { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public int PassingScore { get; set; }
     }
 }

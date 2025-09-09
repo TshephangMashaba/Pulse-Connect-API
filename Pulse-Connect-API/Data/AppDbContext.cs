@@ -128,6 +128,25 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
             .WithOne(c => c.CourseTest)
             .HasForeignKey<CourseTest>(ct => ct.CourseId)
             .OnDelete(DeleteBehavior.Cascade);
+
+
+        modelBuilder.Entity<Certificate>()
+    .HasOne(c => c.User)
+    .WithMany()
+    .HasForeignKey(c => c.UserId)
+    .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<Certificate>()
+            .HasOne(c => c.Course)
+            .WithMany()
+            .HasForeignKey(c => c.CourseId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Certificate>()
+            .HasOne(c => c.TestAttempt)
+            .WithMany()
+            .HasForeignKey(c => c.TestAttemptId)
+            .OnDelete(DeleteBehavior.NoAction);
     }
     public DbSet<User> Users { get; set; }
     public DbSet<Course> Courses { get; set; }
@@ -139,4 +158,6 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
     public DbSet<UserChapterProgress> UserChapterProgresses { get; set; }
     public DbSet<TestAttempt> TestAttempts { get; set; }
     public DbSet<UserAnswer> UserAnswers { get; set; }
+
+    public DbSet<Certificate> Certificates { get; set; }
 }

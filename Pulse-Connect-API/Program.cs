@@ -10,6 +10,7 @@ using Pulse_Connect_API.Service;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -122,6 +123,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     ));
 
 builder.Services.AddMemoryCache();
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        options.JsonSerializerOptions.WriteIndented = true;
+    });
 
 var app = builder.Build();
 
