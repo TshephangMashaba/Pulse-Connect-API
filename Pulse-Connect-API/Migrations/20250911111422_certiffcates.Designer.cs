@@ -11,15 +11,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Pulse_Connect_API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250907141258_nw")]
-    partial class nw
+    [Migration("20250911111422_certiffcates")]
+    partial class certiffcates
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.3")
+                .HasAnnotation("ProductVersion", "8.0.15")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -159,6 +159,85 @@ namespace Pulse_Connect_API.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Pulse_Connect_API.Models.Certificate", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CertificateNumber")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("CourseId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("DownloadUrl")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime?>("EmailedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsEmailed")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("IssueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Score")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TestAttemptId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("TestAttemptId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Certificates");
+                });
+
+            modelBuilder.Entity("Pulse_Connect_API.Models.CertificateShare", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CertificateId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Platform")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("SharedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CertificateId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("CertificateShares");
+                });
+
             modelBuilder.Entity("Pulse_Connect_API.Models.Chapter", b =>
                 {
                     b.Property<string>("Id")
@@ -193,6 +272,46 @@ namespace Pulse_Connect_API.Migrations
                     b.HasIndex("CourseId");
 
                     b.ToTable("Chapters");
+                });
+
+            modelBuilder.Entity("Pulse_Connect_API.Models.Comment", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Likes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ParentCommentId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("PostId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentCommentId");
+
+                    b.HasIndex("PostId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("Pulse_Connect_API.Models.Course", b =>
@@ -263,6 +382,83 @@ namespace Pulse_Connect_API.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Enrollments");
+                });
+
+            modelBuilder.Entity("Pulse_Connect_API.Models.Post", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAnonymous")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Likes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Province")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Topic")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Views")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Posts");
+                });
+
+            modelBuilder.Entity("Pulse_Connect_API.Models.PostImage", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Caption")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PostId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PostId");
+
+                    b.ToTable("PostImages");
                 });
 
             modelBuilder.Entity("Pulse_Connect_API.Models.QuestionOption", b =>
@@ -526,16 +722,14 @@ namespace Pulse_Connect_API.Migrations
 
                     b.Property<string>("ChapterId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)")
-                        .HasColumnName("ChapterId");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime?>("CompletedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("EnrollmentId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)")
-                        .HasColumnName("EnrollmentId");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<bool>("IsCompleted")
                         .HasColumnType("bit");
@@ -550,6 +744,33 @@ namespace Pulse_Connect_API.Migrations
                     b.HasIndex("EnrollmentId");
 
                     b.ToTable("UserChapterProgresses");
+                });
+
+            modelBuilder.Entity("Pulse_Connect_API.Models.UserProvince", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("JoinedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Province")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId", "Province")
+                        .IsUnique();
+
+                    b.ToTable("UserProvinces");
                 });
 
             modelBuilder.Entity("CourseTest", b =>
@@ -614,6 +835,52 @@ namespace Pulse_Connect_API.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Pulse_Connect_API.Models.Certificate", b =>
+                {
+                    b.HasOne("Pulse_Connect_API.Models.Course", "Course")
+                        .WithMany()
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Pulse_Connect_API.Models.TestAttempt", "TestAttempt")
+                        .WithMany()
+                        .HasForeignKey("TestAttemptId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Pulse_Connect_API.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("TestAttempt");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Pulse_Connect_API.Models.CertificateShare", b =>
+                {
+                    b.HasOne("Pulse_Connect_API.Models.Certificate", "Certificate")
+                        .WithMany()
+                        .HasForeignKey("CertificateId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Pulse_Connect_API.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Certificate");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Pulse_Connect_API.Models.Chapter", b =>
                 {
                     b.HasOne("Pulse_Connect_API.Models.Course", "Course")
@@ -623,6 +890,32 @@ namespace Pulse_Connect_API.Migrations
                         .IsRequired();
 
                     b.Navigation("Course");
+                });
+
+            modelBuilder.Entity("Pulse_Connect_API.Models.Comment", b =>
+                {
+                    b.HasOne("Pulse_Connect_API.Models.Comment", "ParentComment")
+                        .WithMany("Replies")
+                        .HasForeignKey("ParentCommentId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.HasOne("Pulse_Connect_API.Models.Post", "Post")
+                        .WithMany("Comments")
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Pulse_Connect_API.Models.User", "Author")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+
+                    b.Navigation("ParentComment");
+
+                    b.Navigation("Post");
                 });
 
             modelBuilder.Entity("Pulse_Connect_API.Models.Course", b =>
@@ -653,6 +946,28 @@ namespace Pulse_Connect_API.Migrations
                     b.Navigation("Course");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Pulse_Connect_API.Models.Post", b =>
+                {
+                    b.HasOne("Pulse_Connect_API.Models.User", "Author")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+                });
+
+            modelBuilder.Entity("Pulse_Connect_API.Models.PostImage", b =>
+                {
+                    b.HasOne("Pulse_Connect_API.Models.Post", "Post")
+                        .WithMany("Images")
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Post");
                 });
 
             modelBuilder.Entity("Pulse_Connect_API.Models.QuestionOption", b =>
@@ -741,6 +1056,17 @@ namespace Pulse_Connect_API.Migrations
                     b.Navigation("Enrollment");
                 });
 
+            modelBuilder.Entity("Pulse_Connect_API.Models.UserProvince", b =>
+                {
+                    b.HasOne("Pulse_Connect_API.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("CourseTest", b =>
                 {
                     b.Navigation("Questions");
@@ -749,6 +1075,11 @@ namespace Pulse_Connect_API.Migrations
             modelBuilder.Entity("Pulse_Connect_API.Models.Chapter", b =>
                 {
                     b.Navigation("UserProgresses");
+                });
+
+            modelBuilder.Entity("Pulse_Connect_API.Models.Comment", b =>
+                {
+                    b.Navigation("Replies");
                 });
 
             modelBuilder.Entity("Pulse_Connect_API.Models.Course", b =>
@@ -766,6 +1097,13 @@ namespace Pulse_Connect_API.Migrations
                     b.Navigation("ChapterProgress");
 
                     b.Navigation("TestAttempts");
+                });
+
+            modelBuilder.Entity("Pulse_Connect_API.Models.Post", b =>
+                {
+                    b.Navigation("Comments");
+
+                    b.Navigation("Images");
                 });
 
             modelBuilder.Entity("Pulse_Connect_API.Models.TestAttempt", b =>

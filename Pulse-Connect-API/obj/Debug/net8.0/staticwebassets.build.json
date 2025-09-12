@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "f4O2+n12xGPgk4dzE1FgzTNne1Oz8RH+VT5Lv2QXu2Q=",
+  "Hash": "UzaaTomV+/7FhfpUrQJ77D7YoZi/KEomXmnv6Jci4C0=",
   "Source": "Pulse-Connect-API",
   "BasePath": "_content/Pulse-Connect-API",
   "Mode": "Default",
@@ -80,6 +80,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg"
     },
     {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\4af45a27-8ab5-4f09-abfb-2919d3eb0d5a_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/4af45a27-8ab5-4f09-abfb-2919d3eb0d5a_0afc778e65f32bfe465a1e55a892bc752a674b6d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m26q6fpd7w",
+      "Integrity": "wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\4af45a27-8ab5-4f09-abfb-2919d3eb0d5a_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg"
+    },
+    {
       "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png",
       "SourceId": "Pulse-Connect-API",
       "SourceType": "Discovered",
@@ -120,6 +141,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.png"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\8e7387ab-9670-4e47-9313-f8e174887bef_Certificate_PC-20250910-2EECA5A5.pdf",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/8e7387ab-9670-4e47-9313-f8e174887bef_Certificate_PC-20250910-2EECA5A5#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xwc0v0wzt5",
+      "Integrity": "n3+f6t88xBHRIJo1Mb1YpzDQx45JbxCz+VtWK3Z3ar8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\8e7387ab-9670-4e47-9313-f8e174887bef_Certificate_PC-20250910-2EECA5A5.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\b84d814e-ebe2-4081-92a9-f83e60f8420e_Screenshot 2025-09-06 222345.png",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/b84d814e-ebe2-4081-92a9-f83e60f8420e_Screenshot 2025-09-06 222345#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jhs0k5jcne",
+      "Integrity": "N4juf04ToXFAhhJ9Kd7zkYVFp6Aa12VgKNO9llC013M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\b84d814e-ebe2-4081-92a9-f83e60f8420e_Screenshot 2025-09-06 222345.png"
     },
     {
       "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.png",
@@ -183,6 +246,342 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.png"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\fd2fac21-8dfb-44ab-a6b2-f64b18cc5b0c_Certificate_PC-20250910-2EECA5A5.pdf",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/fd2fac21-8dfb-44ab-a6b2-f64b18cc5b0c_Certificate_PC-20250910-2EECA5A5#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xwc0v0wzt5",
+      "Integrity": "n3+f6t88xBHRIJo1Mb1YpzDQx45JbxCz+VtWK3Z3ar8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\fd2fac21-8dfb-44ab-a6b2-f64b18cc5b0c_Certificate_PC-20250910-2EECA5A5.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\21779e04-6b31-4c36-8d20-9ed189bb38f6.png",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/21779e04-6b31-4c36-8d20-9ed189bb38f6#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1o1z32yct0",
+      "Integrity": "MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\21779e04-6b31-4c36-8d20-9ed189bb38f6.png"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\3a5eea9a-036f-417f-a62a-a1cbd17410ae.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/3a5eea9a-036f-417f-a62a-a1cbd17410ae#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k1fne1b6u8",
+      "Integrity": "6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\3a5eea9a-036f-417f-a62a-a1cbd17410ae.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\479d2596-63eb-4b9e-9264-9173d0f9f496_ibali_logo_horizontal_v05.png",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/479d2596-63eb-4b9e-9264-9173d0f9f496_ibali_logo_horizontal_v05#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t9zgc7pddx",
+      "Integrity": "bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\479d2596-63eb-4b9e-9264-9173d0f9f496_ibali_logo_horizontal_v05.png"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\482227d7-01d4-46ec-9da7-332eb5e18f08.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/482227d7-01d4-46ec-9da7-332eb5e18f08#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jgfi7ckkcm",
+      "Integrity": "PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\482227d7-01d4-46ec-9da7-332eb5e18f08.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\4ae40356-9928-4177-a586-ed3568b6d3e0_9f667007956780a1199057b70f5d5cc63e391e15.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/4ae40356-9928-4177-a586-ed3568b6d3e0_9f667007956780a1199057b70f5d5cc63e391e15#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jgfi7ckkcm",
+      "Integrity": "PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\4ae40356-9928-4177-a586-ed3568b6d3e0_9f667007956780a1199057b70f5d5cc63e391e15.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\6360856a-4f54-42bf-b9ee-d8a68e20e93f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/6360856a-4f54-42bf-b9ee-d8a68e20e93f_0afc778e65f32bfe465a1e55a892bc752a674b6d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m26q6fpd7w",
+      "Integrity": "wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\6360856a-4f54-42bf-b9ee-d8a68e20e93f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\6b726e8c-dcd0-4046-b750-03878dba585c_9f667007956780a1199057b70f5d5cc63e391e15.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/6b726e8c-dcd0-4046-b750-03878dba585c_9f667007956780a1199057b70f5d5cc63e391e15#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jgfi7ckkcm",
+      "Integrity": "PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\6b726e8c-dcd0-4046-b750-03878dba585c_9f667007956780a1199057b70f5d5cc63e391e15.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\79c4de8d-b1df-451d-8ebf-42a019c8dc6d.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/79c4de8d-b1df-451d-8ebf-42a019c8dc6d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jgfi7ckkcm",
+      "Integrity": "PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\79c4de8d-b1df-451d-8ebf-42a019c8dc6d.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\7dfe4490-28c2-490f-ba00-1c66f1787c79.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/7dfe4490-28c2-490f-ba00-1c66f1787c79#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m26q6fpd7w",
+      "Integrity": "wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\7dfe4490-28c2-490f-ba00-1c66f1787c79.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\8726a24b-7acb-43f1-9f6a-40a9a4280e3b.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/8726a24b-7acb-43f1-9f6a-40a9a4280e3b#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m26q6fpd7w",
+      "Integrity": "wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\8726a24b-7acb-43f1-9f6a-40a9a4280e3b.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\af49e49b-88f6-46be-95aa-e9543e5e4560_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/af49e49b-88f6-46be-95aa-e9543e5e4560_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k1fne1b6u8",
+      "Integrity": "6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\af49e49b-88f6-46be-95aa-e9543e5e4560_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\bdcfacd7-7efe-466b-a7cc-797afda1f395.png",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/bdcfacd7-7efe-466b-a7cc-797afda1f395#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t9zgc7pddx",
+      "Integrity": "bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\bdcfacd7-7efe-466b-a7cc-797afda1f395.png"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\c6fa3020-feeb-49a4-9acb-00c7fe27913f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/c6fa3020-feeb-49a4-9acb-00c7fe27913f_0afc778e65f32bfe465a1e55a892bc752a674b6d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m26q6fpd7w",
+      "Integrity": "wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\c6fa3020-feeb-49a4-9acb-00c7fe27913f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\ddaea799-45a1-4a7d-a7b8-3f99d92fed26_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/ddaea799-45a1-4a7d-a7b8-3f99d92fed26_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k1fne1b6u8",
+      "Integrity": "6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\ddaea799-45a1-4a7d-a7b8-3f99d92fed26_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\e40c1afe-cb36-4513-9e9d-bf13c18fac07_ibali_logo_horizontal_v05.png",
+      "SourceId": "Pulse-Connect-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\",
+      "BasePath": "_content/Pulse-Connect-API",
+      "RelativePath": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/e40c1afe-cb36-4513-9e9d-bf13c18fac07_ibali_logo_horizontal_v05#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t9zgc7pddx",
+      "Integrity": "bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\e40c1afe-cb36-4513-9e9d-bf13c18fac07_ibali_logo_horizontal_v05.png"
     }
   ],
   "Endpoints": [
@@ -433,6 +832,88 @@
       ]
     },
     {
+      "Route": "uploads/4af45a27-8ab5-4f09-abfb-2919d3eb0d5a_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\4af45a27-8ab5-4f09-abfb-2919d3eb0d5a_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:29:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/4af45a27-8ab5-4f09-abfb-2919d3eb0d5a_0afc778e65f32bfe465a1e55a892bc752a674b6d.m26q6fpd7w.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\4af45a27-8ab5-4f09-abfb-2919d3eb0d5a_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:29:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m26q6fpd7w"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/4af45a27-8ab5-4f09-abfb-2919d3eb0d5a_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        }
+      ]
+    },
+    {
       "Route": "uploads/4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png",
       "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png",
       "Selectors": [],
@@ -593,6 +1074,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/8e7387ab-9670-4e47-9313-f8e174887bef_Certificate_PC-20250910-2EECA5A5.pdf",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\8e7387ab-9670-4e47-9313-f8e174887bef_Certificate_PC-20250910-2EECA5A5.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24078267"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n3+f6t88xBHRIJo1Mb1YpzDQx45JbxCz+VtWK3Z3ar8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:28:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-n3+f6t88xBHRIJo1Mb1YpzDQx45JbxCz+VtWK3Z3ar8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/8e7387ab-9670-4e47-9313-f8e174887bef_Certificate_PC-20250910-2EECA5A5.xwc0v0wzt5.pdf",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\8e7387ab-9670-4e47-9313-f8e174887bef_Certificate_PC-20250910-2EECA5A5.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24078267"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n3+f6t88xBHRIJo1Mb1YpzDQx45JbxCz+VtWK3Z3ar8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:28:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xwc0v0wzt5"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/8e7387ab-9670-4e47-9313-f8e174887bef_Certificate_PC-20250910-2EECA5A5.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-n3+f6t88xBHRIJo1Mb1YpzDQx45JbxCz+VtWK3Z3ar8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/b84d814e-ebe2-4081-92a9-f83e60f8420e_Screenshot 2025-09-06 222345.jhs0k5jcne.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\b84d814e-ebe2-4081-92a9-f83e60f8420e_Screenshot 2025-09-06 222345.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1414487"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"N4juf04ToXFAhhJ9Kd7zkYVFp6Aa12VgKNO9llC013M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:28:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jhs0k5jcne"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/b84d814e-ebe2-4081-92a9-f83e60f8420e_Screenshot 2025-09-06 222345.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-N4juf04ToXFAhhJ9Kd7zkYVFp6Aa12VgKNO9llC013M="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/b84d814e-ebe2-4081-92a9-f83e60f8420e_Screenshot 2025-09-06 222345.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\b84d814e-ebe2-4081-92a9-f83e60f8420e_Screenshot 2025-09-06 222345.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1414487"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"N4juf04ToXFAhhJ9Kd7zkYVFp6Aa12VgKNO9llC013M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:28:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-N4juf04ToXFAhhJ9Kd7zkYVFp6Aa12VgKNO9llC013M="
         }
       ]
     },
@@ -835,6 +1480,1318 @@
         {
           "Name": "label",
           "Value": "uploads/eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/fd2fac21-8dfb-44ab-a6b2-f64b18cc5b0c_Certificate_PC-20250910-2EECA5A5.pdf",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\fd2fac21-8dfb-44ab-a6b2-f64b18cc5b0c_Certificate_PC-20250910-2EECA5A5.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24078267"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n3+f6t88xBHRIJo1Mb1YpzDQx45JbxCz+VtWK3Z3ar8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:29:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-n3+f6t88xBHRIJo1Mb1YpzDQx45JbxCz+VtWK3Z3ar8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/fd2fac21-8dfb-44ab-a6b2-f64b18cc5b0c_Certificate_PC-20250910-2EECA5A5.xwc0v0wzt5.pdf",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\fd2fac21-8dfb-44ab-a6b2-f64b18cc5b0c_Certificate_PC-20250910-2EECA5A5.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24078267"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n3+f6t88xBHRIJo1Mb1YpzDQx45JbxCz+VtWK3Z3ar8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:29:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xwc0v0wzt5"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/fd2fac21-8dfb-44ab-a6b2-f64b18cc5b0c_Certificate_PC-20250910-2EECA5A5.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-n3+f6t88xBHRIJo1Mb1YpzDQx45JbxCz+VtWK3Z3ar8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/21779e04-6b31-4c36-8d20-9ed189bb38f6.1o1z32yct0.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\21779e04-6b31-4c36-8d20-9ed189bb38f6.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "789790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:54:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1o1z32yct0"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/21779e04-6b31-4c36-8d20-9ed189bb38f6.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/21779e04-6b31-4c36-8d20-9ed189bb38f6.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\21779e04-6b31-4c36-8d20-9ed189bb38f6.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "789790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:54:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MT6DPgekwb5/Jnz+NxnmZT8nBi2x9+jW4k5Gp8eRa1U="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/3a5eea9a-036f-417f-a62a-a1cbd17410ae.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\3a5eea9a-036f-417f-a62a-a1cbd17410ae.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:42:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/3a5eea9a-036f-417f-a62a-a1cbd17410ae.k1fne1b6u8.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\3a5eea9a-036f-417f-a62a-a1cbd17410ae.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:42:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k1fne1b6u8"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/3a5eea9a-036f-417f-a62a-a1cbd17410ae.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/479d2596-63eb-4b9e-9264-9173d0f9f496_ibali_logo_horizontal_v05.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\479d2596-63eb-4b9e-9264-9173d0f9f496_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:19:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/479d2596-63eb-4b9e-9264-9173d0f9f496_ibali_logo_horizontal_v05.t9zgc7pddx.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\479d2596-63eb-4b9e-9264-9173d0f9f496_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:19:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9zgc7pddx"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/479d2596-63eb-4b9e-9264-9173d0f9f496_ibali_logo_horizontal_v05.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/482227d7-01d4-46ec-9da7-332eb5e18f08.jgfi7ckkcm.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\482227d7-01d4-46ec-9da7-332eb5e18f08.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155659"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:49:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jgfi7ckkcm"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/482227d7-01d4-46ec-9da7-332eb5e18f08.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/482227d7-01d4-46ec-9da7-332eb5e18f08.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\482227d7-01d4-46ec-9da7-332eb5e18f08.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155659"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:49:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/4ae40356-9928-4177-a586-ed3568b6d3e0_9f667007956780a1199057b70f5d5cc63e391e15.jgfi7ckkcm.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\4ae40356-9928-4177-a586-ed3568b6d3e0_9f667007956780a1199057b70f5d5cc63e391e15.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155659"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:19:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jgfi7ckkcm"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/4ae40356-9928-4177-a586-ed3568b6d3e0_9f667007956780a1199057b70f5d5cc63e391e15.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/4ae40356-9928-4177-a586-ed3568b6d3e0_9f667007956780a1199057b70f5d5cc63e391e15.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\4ae40356-9928-4177-a586-ed3568b6d3e0_9f667007956780a1199057b70f5d5cc63e391e15.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155659"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:19:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/6360856a-4f54-42bf-b9ee-d8a68e20e93f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\6360856a-4f54-42bf-b9ee-d8a68e20e93f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 02:08:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/6360856a-4f54-42bf-b9ee-d8a68e20e93f_0afc778e65f32bfe465a1e55a892bc752a674b6d.m26q6fpd7w.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\6360856a-4f54-42bf-b9ee-d8a68e20e93f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 02:08:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m26q6fpd7w"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/6360856a-4f54-42bf-b9ee-d8a68e20e93f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/6b726e8c-dcd0-4046-b750-03878dba585c_9f667007956780a1199057b70f5d5cc63e391e15.jgfi7ckkcm.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\6b726e8c-dcd0-4046-b750-03878dba585c_9f667007956780a1199057b70f5d5cc63e391e15.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155659"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 02:08:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jgfi7ckkcm"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/6b726e8c-dcd0-4046-b750-03878dba585c_9f667007956780a1199057b70f5d5cc63e391e15.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/6b726e8c-dcd0-4046-b750-03878dba585c_9f667007956780a1199057b70f5d5cc63e391e15.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\6b726e8c-dcd0-4046-b750-03878dba585c_9f667007956780a1199057b70f5d5cc63e391e15.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155659"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 02:08:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/79c4de8d-b1df-451d-8ebf-42a019c8dc6d.jgfi7ckkcm.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\79c4de8d-b1df-451d-8ebf-42a019c8dc6d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155659"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:42:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jgfi7ckkcm"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/79c4de8d-b1df-451d-8ebf-42a019c8dc6d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/79c4de8d-b1df-451d-8ebf-42a019c8dc6d.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\79c4de8d-b1df-451d-8ebf-42a019c8dc6d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155659"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:42:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PYoBNqi0ayiRClok3Snni2oYfPemXnklC2kZhj8KD/Q="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/7dfe4490-28c2-490f-ba00-1c66f1787c79.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\7dfe4490-28c2-490f-ba00-1c66f1787c79.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:49:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/7dfe4490-28c2-490f-ba00-1c66f1787c79.m26q6fpd7w.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\7dfe4490-28c2-490f-ba00-1c66f1787c79.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:49:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m26q6fpd7w"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/7dfe4490-28c2-490f-ba00-1c66f1787c79.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/8726a24b-7acb-43f1-9f6a-40a9a4280e3b.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\8726a24b-7acb-43f1-9f6a-40a9a4280e3b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:42:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/8726a24b-7acb-43f1-9f6a-40a9a4280e3b.m26q6fpd7w.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\8726a24b-7acb-43f1-9f6a-40a9a4280e3b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:42:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m26q6fpd7w"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/8726a24b-7acb-43f1-9f6a-40a9a4280e3b.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/af49e49b-88f6-46be-95aa-e9543e5e4560_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\af49e49b-88f6-46be-95aa-e9543e5e4560_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 02:08:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/af49e49b-88f6-46be-95aa-e9543e5e4560_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.k1fne1b6u8.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\af49e49b-88f6-46be-95aa-e9543e5e4560_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 02:08:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k1fne1b6u8"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/af49e49b-88f6-46be-95aa-e9543e5e4560_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/bdcfacd7-7efe-466b-a7cc-797afda1f395.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\bdcfacd7-7efe-466b-a7cc-797afda1f395.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:49:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/bdcfacd7-7efe-466b-a7cc-797afda1f395.t9zgc7pddx.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\bdcfacd7-7efe-466b-a7cc-797afda1f395.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 01:49:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9zgc7pddx"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/bdcfacd7-7efe-466b-a7cc-797afda1f395.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/c6fa3020-feeb-49a4-9acb-00c7fe27913f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\c6fa3020-feeb-49a4-9acb-00c7fe27913f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:19:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/c6fa3020-feeb-49a4-9acb-00c7fe27913f_0afc778e65f32bfe465a1e55a892bc752a674b6d.m26q6fpd7w.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\c6fa3020-feeb-49a4-9acb-00c7fe27913f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138879"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:19:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m26q6fpd7w"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/c6fa3020-feeb-49a4-9acb-00c7fe27913f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wiwrCJCl7rL/nIwvrgUL//sNjXJercYquBoHMncX/uc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/ddaea799-45a1-4a7d-a7b8-3f99d92fed26_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\ddaea799-45a1-4a7d-a7b8-3f99d92fed26_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:19:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/ddaea799-45a1-4a7d-a7b8-3f99d92fed26_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.k1fne1b6u8.jpg",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\ddaea799-45a1-4a7d-a7b8-3f99d92fed26_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 03:19:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k1fne1b6u8"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/ddaea799-45a1-4a7d-a7b8-3f99d92fed26_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6E3rt59aXwY1nvWNnMhYpVGGrGzcQ1fWMuKL8R3DU5k="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/e40c1afe-cb36-4513-9e9d-bf13c18fac07_ibali_logo_horizontal_v05.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\e40c1afe-cb36-4513-9e9d-bf13c18fac07_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 02:08:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/e40c1afe-cb36-4513-9e9d-bf13c18fac07_ibali_logo_horizontal_v05.t9zgc7pddx.png",
+      "AssetFile": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\e40c1afe-cb36-4513-9e9d-bf13c18fac07_ibali_logo_horizontal_v05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bxGDwyoYe0q2yqPvr5fHbzBT5eRlRaC5VbAy65U0px4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Sep 2025 02:08:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9zgc7pddx"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/95469ae9-2dc1-4569-8ec6-5b10a595c0fb/e40c1afe-cb36-4513-9e9d-bf13c18fac07_ibali_logo_horizontal_v05.png"
         },
         {
           "Name": "integrity",

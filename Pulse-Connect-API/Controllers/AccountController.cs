@@ -19,30 +19,34 @@ namespace Pulse_Connect_API.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-    private readonly UserManager<User> _userManager;
-    private readonly IMapper _mapper;
-    private readonly JwtService _jwtService; // Changed from JwtHandler to JwtService
-    private readonly IMemoryCache _cache;
-    private readonly IFluentEmail _emailSender;
+        private readonly UserManager<User> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IMapper _mapper;
+        private readonly JwtService _jwtService;
+        private readonly IMemoryCache _cache;
+        private readonly IFluentEmail _emailSender;
 
-    public AccountController(
-        UserManager<User> userManager,
-        IMapper mapper,
-        JwtService jwtService, // Changed from JwtHandler to JwtService
-        IMemoryCache cache,
-        IFluentEmail emailSender)
-    {
-        _userManager = userManager;
-        _mapper = mapper;
-        _jwtService = jwtService; // Changed from _jwtHandler to _jwtService
-        _cache = cache;
-        _emailSender = emailSender;
-    }
+        public AccountController(
+            UserManager<User> userManager,
+            RoleManager<IdentityRole> roleManager,
+            IMapper mapper,
+            JwtService jwtService,
+            IMemoryCache cache,
+            IFluentEmail emailSender)
+        {
+            _userManager = userManager;
+            _roleManager = roleManager;
+            _mapper = mapper;
+            _jwtService = jwtService;
+            _cache = cache;
+            _emailSender = emailSender;
+        }
 
-    /// <summary>
-    /// Registers a new user for Pulse Connect
-    /// </summary>
-    [HttpPost("register")]
+
+        /// <summary>
+        /// Registers a new user for Pulse Connect
+        /// </summary>
+        [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserRegistrationDTO request)
         {
             try
@@ -336,5 +340,210 @@ namespace Pulse_Connect_API.Controllers
                     $"{Request.Scheme}://{Request.Host}/{user.ProfilePicture}" : null
             });
         }
+
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "USER")]
+        [HttpGet("users")]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            try
+            {
+                var users = _userManager.Users.ToList();
+                var userDtos = new List<UserManagementDTO>();
+
+                foreach (var user in users)
+                {
+                    var roles = await _userManager.GetRolesAsync(user);
+                    userDtos.Add(new UserManagementDTO
+                    {
+                        Id = user.Id,
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        Email = user.Email,
+                        PhoneNumber = user.PhoneNumber,
+                        DateOfBirth = user.DateOfBirth,
+                        Address = user.Address,
+                        Race = user.Race,
+                        Gender = user.Gender,
+                        EmailConfirmed = user.EmailConfirmed,
+                        IsActive = user.LockoutEnd == null || user.LockoutEnd < DateTime.Now,
+                        Roles = roles.ToList(),
+                        CreatedAt = user.CreatedAt
+                    });
+                }
+
+                return Ok(userDtos);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = ex.Message });
+            }
+        }
+
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "USER")]
+        [HttpGet("users/{id}")]
+        public async Task<IActionResult> GetUserById(string id)
+        {
+            try
+            {
+                var user = await _userManager.FindByIdAsync(id);
+                if (user == null)
+                    return NotFound("User not found");
+
+                var roles = await _userManager.GetRolesAsync(user);
+
+                var userDto = new UserManagementDTO
+                {
+                    Id = user.Id,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Email = user.Email,
+                    PhoneNumber = user.PhoneNumber,
+                    DateOfBirth = user.DateOfBirth,
+                    Address = user.Address,
+                    Race = user.Race,
+                    Gender = user.Gender,
+                    EmailConfirmed = user.EmailConfirmed,
+                    IsActive = user.LockoutEnd == null || user.LockoutEnd < DateTime.Now,
+                    Roles = roles.ToList(),
+                    CreatedAt = user.CreatedAt,
+                    ProfilePicture = user.ProfilePicture != null ?
+                        $"{Request.Scheme}://{Request.Host}/{user.ProfilePicture}" : null
+                };
+
+                return Ok(userDto);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Updates user roles (Admin only)
+        /// </summary>
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "USER")]
+        [HttpPut("users/{id}/roles")]
+        public async Task<IActionResult> UpdateUserRoles(string id, [FromBody] UpdateUserRolesDTO request)
+        {
+            try
+            {
+                var user = await _userManager.FindByIdAsync(id);
+                if (user == null)
+                    return NotFound("User not found");
+
+                // Get current roles
+                var currentRoles = await _userManager.GetRolesAsync(user);
+
+                // Remove existing roles
+                var removeResult = await _userManager.RemoveFromRolesAsync(user, currentRoles);
+                if (!removeResult.Succeeded)
+                    return BadRequest(removeResult.Errors.Select(e => e.Description));
+
+                // Add new roles
+                var addResult = await _userManager.AddToRolesAsync(user, request.Roles);
+                if (!addResult.Succeeded)
+                    return BadRequest(addResult.Errors.Select(e => e.Description));
+
+                // Send notification email to user
+                var emailBody = $@"
+                    <h2>Your Roles Have Been Updated</h2>
+                    <p>Hello {user.FirstName},</p>
+                    <p>Your account roles have been updated by an administrator.</p>
+                    <p><strong>New Roles:</strong> {string.Join(", ", request.Roles)}</p>
+                    <p>If you believe this is an error, please contact our support team.</p>";
+
+                await _emailSender
+                    .To(user.Email)
+                    .Subject("Pulse Connect - Account Roles Updated")
+                    .Body(emailBody, isHtml: true)
+                    .SendAsync();
+
+                return Ok(new { Message = "User roles updated successfully" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Toggles user active status (Admin only)
+        /// </summary>
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "USER")]
+        [HttpPost("users/{id}/toggle-active")]
+        public async Task<IActionResult> ToggleUserActiveStatus(string id)
+        {
+            try
+            {
+                var user = await _userManager.FindByIdAsync(id);
+                if (user == null)
+                    return NotFound("User not found");
+
+                if (user.LockoutEnd == null || user.LockoutEnd < DateTime.Now)
+                {
+                    // Deactivate user
+                    await _userManager.SetLockoutEndDateAsync(user, DateTimeOffset.MaxValue);
+
+                    var emailBody = $@"
+                        <h2>Account Deactivated</h2>
+                        <p>Hello {user.FirstName},</p>
+                        <p>Your Pulse Connect account has been deactivated by an administrator.</p>
+                        <p>If you believe this is an error, please contact our support team.</p>";
+
+                    await _emailSender
+                        .To(user.Email)
+                        .Subject("Pulse Connect - Account Deactivated")
+                        .Body(emailBody, isHtml: true)
+                        .SendAsync();
+
+                    return Ok(new { Message = "User deactivated successfully" });
+                }
+                else
+                {
+                    // Activate user
+                    await _userManager.SetLockoutEndDateAsync(user, null);
+
+                    var emailBody = $@"
+                        <h2>Account Reactivated</h2>
+                        <p>Hello {user.FirstName},</p>
+                        <p>Your Pulse Connect account has been reactivated by an administrator.</p>
+                        <p>You can now access your account normally.</p>";
+
+                    await _emailSender
+                        .To(user.Email)
+                        .Subject("Pulse Connect - Account Reactivated")
+                        .Body(emailBody, isHtml: true)
+                        .SendAsync();
+
+                    return Ok(new { Message = "User activated successfully" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Gets available roles (Admin only)
+        /// </summary>
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "USER")]
+        [HttpGet("roles")]
+        public IActionResult GetAvailableRoles()
+        {
+            try
+            {
+                var roles = _roleManager.Roles.Select(r => r.Name).ToList();
+                return Ok(roles);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = ex.Message });
+            }
+        }
     }
+
+
 }
+
+

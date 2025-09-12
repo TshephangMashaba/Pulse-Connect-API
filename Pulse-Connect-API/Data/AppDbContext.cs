@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Pulse_Connect_API.Data;
 using Pulse_Connect_API.Models;
 
 public class AppDbContext : IdentityDbContext<User, Role, string>
@@ -7,6 +8,7 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
     }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -32,7 +34,46 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
             );
         });
 
-        // Configure relationships
+        // COMMUNITY ENTITIES - FIXED CASCADE DELETE ISSUES
+        modelBuilder.Entity<Post>(entity =>
+        {
+            entity.HasOne(p => p.Author)
+                  .WithMany()
+                  .HasForeignKey(p => p.UserId)
+                  .OnDelete(DeleteBehavior.NoAction); // Changed to NoAction
+        });
+
+        modelBuilder.Entity<Comment>(entity =>
+        {
+            entity.HasOne(c => c.Author)
+                  .WithMany()
+                  .HasForeignKey(c => c.UserId)
+                  .OnDelete(DeleteBehavior.NoAction); // Changed to NoAction
+
+            entity.HasOne(c => c.Post)
+                  .WithMany(p => p.Comments)
+                  .HasForeignKey(c => c.PostId)
+                  .OnDelete(DeleteBehavior.NoAction); // Changed from Cascade to NoAction
+
+            entity.HasOne(c => c.ParentComment)
+                  .WithMany(c => c.Replies)
+                  .HasForeignKey(c => c.ParentCommentId)
+                  .OnDelete(DeleteBehavior.NoAction); // Changed to NoAction
+        });
+
+        modelBuilder.Entity<UserProvince>(entity =>
+        {
+            entity.HasOne(up => up.User)
+                  .WithMany()
+                  .HasForeignKey(up => up.UserId)
+                  .OnDelete(DeleteBehavior.NoAction); // Changed to NoAction
+
+            entity.HasIndex(up => new { up.UserId, up.Province }).IsUnique();
+        });
+
+     
+
+        // EXISTING COURSE CONFIGURATIONS (keep as is)
         modelBuilder.Entity<Course>()
             .HasOne(c => c.Instructor)
             .WithMany()
@@ -51,7 +92,6 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
             .HasForeignKey(e => e.CourseId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        // UserChapterProgress relationships
         modelBuilder.Entity<UserChapterProgress>()
             .HasOne(ucp => ucp.Enrollment)
             .WithMany(e => e.ChapterProgress)
@@ -60,19 +100,10 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
 
         modelBuilder.Entity<UserChapterProgress>()
             .HasOne(ucp => ucp.Chapter)
-            .WithMany(c => c.UserProgresses) // Specify inverse navigation property
+            .WithMany(c => c.UserProgresses)
             .HasForeignKey(ucp => ucp.ChapterId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        modelBuilder.Entity<UserChapterProgress>()
-            .Property(ucp => ucp.ChapterId)
-            .HasColumnName("ChapterId"); // Explicitly map ChapterId
-
-        modelBuilder.Entity<UserChapterProgress>()
-            .Property(ucp => ucp.EnrollmentId)
-            .HasColumnName("EnrollmentId"); // Explicitly map EnrollmentId
-
-        // TestAttempt relationships
         modelBuilder.Entity<TestAttempt>()
             .HasOne(ta => ta.Enrollment)
             .WithMany(e => e.TestAttempts)
@@ -85,7 +116,6 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
             .HasForeignKey(ta => ta.TestId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        // UserAnswer relationships
         modelBuilder.Entity<UserAnswer>()
             .HasOne(ua => ua.TestAttempt)
             .WithMany(ta => ta.UserAnswers)
@@ -104,12 +134,24 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
             .HasForeignKey(ua => ua.SelectedOptionId)
             .OnDelete(DeleteBehavior.NoAction);
 
-        // Other relationships
         modelBuilder.Entity<QuestionOption>()
             .HasOne(qo => qo.Question)
             .WithMany(tq => tq.Options)
             .HasForeignKey(qo => qo.QuestionId)
             .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<CertificateShare>(entity =>
+        {
+            entity.HasOne(cs => cs.User)
+                  .WithMany()
+                  .HasForeignKey(cs => cs.UserId)
+                  .OnDelete(DeleteBehavior.NoAction);
+
+            entity.HasOne(cs => cs.Certificate)
+                  .WithMany()
+                  .HasForeignKey(cs => cs.CertificateId)
+                  .OnDelete(DeleteBehavior.NoAction);
+        });
 
         modelBuilder.Entity<TestQuestion>()
             .HasOne(tq => tq.Test)
@@ -129,12 +171,11 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
             .HasForeignKey<CourseTest>(ct => ct.CourseId)
             .OnDelete(DeleteBehavior.Cascade);
 
-
         modelBuilder.Entity<Certificate>()
-    .HasOne(c => c.User)
-    .WithMany()
-    .HasForeignKey(c => c.UserId)
-    .OnDelete(DeleteBehavior.Restrict);
+            .HasOne(c => c.User)
+            .WithMany()
+            .HasForeignKey(c => c.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
 
         modelBuilder.Entity<Certificate>()
             .HasOne(c => c.Course)
@@ -142,12 +183,21 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
             .HasForeignKey(c => c.CourseId)
             .OnDelete(DeleteBehavior.Cascade);
 
+        modelBuilder.Entity<PostImage>(entity =>
+        {
+            entity.HasOne(pi => pi.Post)
+                  .WithMany(p => p.Images)
+                  .HasForeignKey(pi => pi.PostId)
+                  .OnDelete(DeleteBehavior.Cascade);
+        });
+
         modelBuilder.Entity<Certificate>()
             .HasOne(c => c.TestAttempt)
             .WithMany()
             .HasForeignKey(c => c.TestAttemptId)
             .OnDelete(DeleteBehavior.NoAction);
     }
+
     public DbSet<User> Users { get; set; }
     public DbSet<Course> Courses { get; set; }
     public DbSet<Chapter> Chapters { get; set; }
@@ -158,6 +208,15 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
     public DbSet<UserChapterProgress> UserChapterProgresses { get; set; }
     public DbSet<TestAttempt> TestAttempts { get; set; }
     public DbSet<UserAnswer> UserAnswers { get; set; }
-
     public DbSet<Certificate> Certificates { get; set; }
+
+    // Community entities
+    public DbSet<Post> Posts { get; set; }
+    public DbSet<Comment> Comments { get; set; }
+    public DbSet<UserProvince> UserProvinces { get; set; }
+
+    public DbSet<PostImage> PostImages { get; set; }
+
+    public DbSet<CertificateShare> CertificateShares { get; set; }
+
 }

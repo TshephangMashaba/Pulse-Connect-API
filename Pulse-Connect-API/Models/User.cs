@@ -13,6 +13,9 @@ namespace Pulse_Connect_API.Models
          public string Address { get; set; }
         public string Race { get; set; }
         public string Gender { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
     }
 
 

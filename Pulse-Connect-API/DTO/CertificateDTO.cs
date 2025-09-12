@@ -25,4 +25,26 @@
         public string CertificateId { get; set; }
         public string RecipientEmail { get; set; }
     }
+
+
+    public class BadgeDto
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Icon { get; set; }
+        public bool Earned { get; set; }
+        public int Progress { get; set; }
+        public int Target { get; set; }
+        public string Category { get; set; }
+    }
+
+    public class AchievementResponseDto
+    {
+        public List<BadgeDto> Badges { get; set; }
+        public List<BadgeDto> EarnedBadges { get; set; }
+        public List<BadgeDto> PendingBadges { get; set; }
+        public int TotalBadges { get; set; }
+        public int EarnedCount { get; set; }
+    }
 }

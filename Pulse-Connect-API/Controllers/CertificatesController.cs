@@ -26,19 +26,25 @@ namespace Pulse_Connect_API.Controllers
         private readonly UserManager<User> _userManager;
         private readonly IFluentEmail _emailSender;
         private readonly IWebHostEnvironment _environment;
+        private readonly ILogger _logger;
 
         public CertificatesController(
             AppDbContext context,
             UserManager<User> userManager,
             IFluentEmail emailSender,
-            IWebHostEnvironment environment)
+            IWebHostEnvironment environment,
+            ILogger<CertificatesController> logger)
+     
+
         {
             _context = context;
             _userManager = userManager;
             _emailSender = emailSender;
             _environment = environment;
+             _logger = logger;
         }
 
+        // GET: api/certificates/my-certificates
         // GET: api/certificates/my-certificates
         [HttpGet("my-certificates")]
         public async Task<ActionResult<IEnumerable<CertificateDTO>>> GetMyCertificates()
@@ -49,11 +55,19 @@ namespace Pulse_Connect_API.Controllers
                 return Unauthorized("Invalid or missing user ID in token");
             }
 
-            var certificates = await _context.Certificates
+            // First get all certificates for the user
+            var allCertificates = await _context.Certificates
                 .Include(c => c.Course)
                 .Include(c => c.User)
                 .Where(c => c.UserId == userId)
-                .OrderByDescending(c => c.IssueDate)
+                .ToListAsync();
+
+            // Then group by course and select the certificate with highest score
+            var bestCertificates = allCertificates
+                .GroupBy(c => c.CourseId)
+                .Select(g => g.OrderByDescending(c => c.Score)
+                             .ThenByDescending(c => c.IssueDate)
+                             .First())
                 .Select(c => new CertificateDTO
                 {
                     Id = c.Id,
@@ -67,9 +81,10 @@ namespace Pulse_Connect_API.Controllers
                     DownloadUrl = c.DownloadUrl,
                     IsEmailed = c.IsEmailed
                 })
-                .ToListAsync();
+                .OrderByDescending(c => c.IssueDate)
+                .ToList();
 
-            return Ok(certificates);
+            return Ok(bestCertificates);
         }
 
         // GET: api/certificates/{id}
@@ -341,7 +356,8 @@ namespace Pulse_Connect_API.Controllers
                 return Unauthorized("Invalid or missing user ID in token");
             }
 
-            var certificates = await _context.Certificates
+            // Get only the most recent certificate for this specific course
+            var certificate = await _context.Certificates
                 .Include(c => c.Course)
                 .Include(c => c.User)
                 .Where(c => c.UserId == userId && c.CourseId == courseId)
@@ -359,9 +375,14 @@ namespace Pulse_Connect_API.Controllers
                     DownloadUrl = c.DownloadUrl,
                     IsEmailed = c.IsEmailed
                 })
-                .ToListAsync();
+                .FirstOrDefaultAsync(); // Only return one certificate
 
-            return Ok(certificates);
+            if (certificate == null)
+            {
+                return NotFound("No certificate found for this course");
+            }
+
+            return Ok(certificate);
         }
 
         [HttpGet("stats")]
@@ -388,6 +409,197 @@ namespace Pulse_Connect_API.Controllers
                 BadgesEarned = badgesEarned
             });
         }
+        [HttpPost("{certificateId}/share")]
+        public async Task<IActionResult> ShareCertificate(string certificateId, [FromBody] ShareRequestDto shareRequest)
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized();
+            }
 
+            var certificate = await _context.Certificates.FindAsync(certificateId);
+            if (certificate == null || certificate.UserId != userId)
+            {
+                return NotFound("Certificate not found");
+            }
+
+            var share = new CertificateShare
+            {
+                UserId = userId,
+                CertificateId = certificateId,
+                Platform = shareRequest.Platform,
+                SharedDate = DateTime.UtcNow
+            };
+
+            _context.CertificateShares.Add(share);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Certificate share recorded" });
+        }
+
+        public class ShareRequestDto
+        {
+            public string Platform { get; set; }
+        }
+
+        [HttpGet("achievements")]
+        public async Task<ActionResult<AchievementResponseDto>> GetAchievements()
+        {
+            try
+            {
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return Unauthorized("Invalid or missing user ID in token");
+                }
+
+                // Get user certificates
+                var certificates = await _context.Certificates
+                    .Where(c => c.UserId == userId)
+                    .ToListAsync();
+
+                // Get test attempts with enrollment data
+                var testAttempts = await _context.TestAttempts
+                    .Include(ta => ta.Enrollment)
+                    .Where(ta => ta.Enrollment.UserId == userId)
+                    .ToListAsync();
+
+                // Get forum posts count
+                var forumPosts = await _context.Posts
+                    .Where(p => p.UserId == userId)
+                    .CountAsync();
+
+                // Get shared certificates count
+                var sharedCertificates = await _context.CertificateShares
+                    .Where(cs => cs.UserId == userId)
+                    .CountAsync();
+
+                // Get courses completed in one day (for Quick Learner badge)
+                var quickLearnerCourses = await _context.Enrollments
+                    .Include(e => e.Course)
+                    .Where(e => e.UserId == userId && e.CompletionDate.HasValue)
+                    .Select(e => new
+                    {
+                        e.CourseId,
+                        e.EnrollmentDate,
+                        e.CompletionDate,
+                        Duration = EF.Functions.DateDiffDay(e.EnrollmentDate, e.CompletionDate.Value)
+                    })
+                    .Where(x => x.Duration <= 1)
+                    .CountAsync();
+
+                // Create badges list
+                var badges = new List<BadgeDto>
+        {
+            new BadgeDto
+            {
+                Id = "1",
+                Name = "Health Champion",
+                Description = "Complete 3 courses",
+                Icon = "🏆",
+                Earned = certificates.Count >= 3,
+                Progress = Math.Min(certificates.Count, 3),
+                Target = 3,
+                Category = "completion"
+            },
+            new BadgeDto
+            {
+                Id = "2",
+                Name = "Quick Learner",
+                Description = "Finish a course in 1 day",
+                Icon = "⚡",
+                Earned = quickLearnerCourses > 0,
+                Progress = quickLearnerCourses,
+                Target = 1,
+                Category = "speed"
+            },
+            new BadgeDto
+            {
+                Id = "3",
+                Name = "Community Helper",
+                Description = "5 forum posts",
+                Icon = "💬",
+                Earned = forumPosts >= 5,
+                Progress = Math.Min(forumPosts, 5),
+                Target = 5,
+                Category = "community"
+            },
+            new BadgeDto
+            {
+                Id = "4",
+                Name = "Quiz Master",
+                Description = "Score 100% on a quiz",
+                Icon = "🎯",
+                Earned = testAttempts.Any(ta => ta.Score == 100),
+                Progress = testAttempts.Any(ta => ta.Score == 100) ? 1 : 0,
+                Target = 1,
+                Category = "performance"
+            },
+            new BadgeDto
+            {
+                Id = "5",
+                Name = "Knowledge Seeker",
+                Description = "Complete 5 courses",
+                Icon = "📚",
+                Earned = certificates.Count >= 5,
+                Progress = Math.Min(certificates.Count, 5),
+                Target = 5,
+                Category = "completion"
+            },
+            new BadgeDto
+            {
+                Id = "6",
+                Name = "Health Advocate",
+                Description = "Share 3 certificates",
+                Icon = "📤",
+                Earned = sharedCertificates >= 3,
+                Progress = Math.Min(sharedCertificates, 3),
+                Target = 3,
+                Category = "sharing"
+            },
+            new BadgeDto
+            {
+                Id = "7",
+                Name = "Certified Pro",
+                Description = "Earn 10 certificates",
+                Icon = "⭐",
+                Earned = certificates.Count >= 10,
+                Progress = Math.Min(certificates.Count, 10),
+                Target = 10,
+                Category = "mastery"
+            },
+            new BadgeDto
+            {
+                Id = "8",
+                Name = "Perfect Score",
+                Description = "Get 100% on 3 different courses",
+                Icon = "💯",
+                Earned = certificates.Count(c => c.Score == 100) >= 3,
+                Progress = Math.Min(certificates.Count(c => c.Score == 100), 3),
+                Target = 3,
+                Category = "excellence"
+            }
+        };
+
+                // Create response
+                var response = new AchievementResponseDto
+                {
+                    Badges = badges,
+                    EarnedBadges = badges.Where(b => b.Earned).ToList(),
+                    PendingBadges = badges.Where(b => !b.Earned).ToList(),
+                    TotalBadges = badges.Count,
+                    EarnedCount = badges.Count(b => b.Earned)
+                };
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                // Log the error
+                _logger.LogError(ex, "Error retrieving achievements for user");
+                return StatusCode(500, "An error occurred while retrieving achievements");
+            }
+        }
     }
 }

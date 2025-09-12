@@ -100,4 +100,28 @@ namespace Pulse_Connect_API.DTO
         public string Token { get; set; }
         public object User { get; set; }
     }
+
+    public class UserManagementDTO
+    {
+        public string Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string Address { get; set; }
+        public string Race { get; set; }
+        public string Gender { get; set; }
+        public bool EmailConfirmed { get; set; }
+        public bool IsActive { get; set; }
+        public List<string> Roles { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public string ProfilePicture { get; set; }
+    }
+
+    public class UpdateUserRolesDTO
+    {
+        [Required]
+        public List<string> Roles { get; set; }
+    }
 }

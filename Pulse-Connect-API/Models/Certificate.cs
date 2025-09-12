@@ -45,4 +45,17 @@ namespace Pulse_Connect_API.Models
         [ForeignKey("TestAttemptId")]
         public TestAttempt TestAttempt { get; set; }
     }
+
+    public class CertificateShare
+    {
+        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public string UserId { get; set; }
+        public string CertificateId { get; set; }
+        public string Platform { get; set; } // e.g., "email", "whatsapp", "linkedin", etc.
+        public DateTime SharedDate { get; set; } = DateTime.UtcNow;
+
+        // Navigation properties
+        public User User { get; set; }
+        public Certificate Certificate { get; set; }
+    }
 }
