@@ -114,7 +114,8 @@ namespace Pulse_Connect_API.Controllers
                 Content = post.Content,
                 AuthorId = post.UserId,
                 AuthorName = post.IsAnonymous ? "Anonymous" : $"{author.FirstName} {author.LastName}",
-                AuthorProfilePicture = post.IsAnonymous ? null : author.ProfilePicture,
+                // Fix: Ensure profile picture URL is properly formatted
+                AuthorProfilePicture = post.IsAnonymous ? null : GetFullProfilePictureUrl(author.ProfilePicture),
                 Province = post.Province,
                 Type = post.Type.ToString(),
                 Topic = post.Topic,
@@ -131,6 +132,23 @@ namespace Pulse_Connect_API.Controllers
                     Order = i.Order
                 }).ToList()
             };
+        }
+
+        private string GetFullProfilePictureUrl(string profilePicture)
+        {
+            if (string.IsNullOrEmpty(profilePicture))
+                return null;
+
+            // If it's already a full URL, return as-is
+            if (profilePicture.StartsWith("http://") || profilePicture.StartsWith("https://"))
+                return profilePicture;
+
+            // If it's a relative path, make it absolute
+            if (profilePicture.StartsWith("/"))
+                return $"{Request.Scheme}://{Request.Host}{profilePicture}";
+
+            // For relative paths without leading slash
+            return $"{Request.Scheme}://{Request.Host}/{profilePicture.TrimStart('/')}";
         }
 
         [HttpGet("provinces/available")]
@@ -252,16 +270,52 @@ namespace Pulse_Connect_API.Controllers
         [HttpPost("posts/{id}/like")]
         public async Task<ActionResult> LikePost(string id)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
+
             var post = await _context.Posts.FindAsync(id);
             if (post == null)
             {
                 return NotFound();
             }
 
-            post.Likes++;
+            // Check if user already liked this post
+            var existingLike = await _context.PostLikes
+                .FirstOrDefaultAsync(pl => pl.PostId == id && pl.UserId == userId);
+
+            if (existingLike != null)
+            {
+                // User already liked - remove the like (UNLIKE)
+                _context.PostLikes.Remove(existingLike);
+                post.Likes--; // DECREMENT the like count
+            }
+            else
+            {
+                // User hasn't liked - add like (LIKE)
+                var postLike = new PostLike
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    PostId = id,
+                    UserId = userId,
+                    CreatedAt = DateTime.UtcNow
+                };
+                _context.PostLikes.Add(postLike);
+                post.Likes++; // INCREMENT the like count
+            }
+
             await _context.SaveChangesAsync();
 
-            return Ok(new { Likes = post.Likes });
+            // Check if current user liked this post (true if they just liked it, false if they unliked)
+            var userLiked = existingLike == null;
+
+            return Ok(new
+            {
+                Likes = post.Likes,
+                UserLiked = userLiked
+            });
         }
 
         // GET: api/community/posts/{id}/comments
@@ -281,7 +335,7 @@ namespace Pulse_Connect_API.Controllers
                 Content = c.Content,
                 AuthorId = c.UserId,
                 AuthorName = $"{c.Author.FirstName} {c.Author.LastName}",
-                AuthorProfilePicture = c.Author.ProfilePicture,
+                AuthorProfilePicture = GetFullProfilePictureUrl(c.Author.ProfilePicture),
                 PostId = c.PostId,
                 ParentCommentId = c.ParentCommentId,
                 CreatedAt = c.CreatedAt,
@@ -290,6 +344,21 @@ namespace Pulse_Connect_API.Controllers
             });
 
             return Ok(commentDtos);
+        }
+
+        [HttpGet("posts/{id}/userlike")]
+        public async Task<ActionResult<bool>> GetUserLikeStatus(string id)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null)
+            {
+                return Ok(false);
+            }
+
+            var userLiked = await _context.PostLikes
+                .AnyAsync(pl => pl.PostId == id && pl.UserId == userId);
+
+            return Ok(userLiked);
         }
 
         // POST: api/community/comments
@@ -403,7 +472,7 @@ namespace Pulse_Connect_API.Controllers
         public async Task<ActionResult<IEnumerable<ProvinceStatsDto>>> GetProvinceStats()
         {
             var provinceStats = await _context.UserProvinces
-                .Where(up => up.IsActive)
+                .Where(up => up.IsActive) // Only count active members
                 .GroupBy(up => up.Province)
                 .Select(g => new ProvinceStatsDto
                 {
@@ -413,7 +482,7 @@ namespace Pulse_Connect_API.Controllers
                     ActiveDiscussions = _context.Posts.Count(p => p.Province == g.Key && p.Comments.Any(c => c.CreatedAt > DateTime.UtcNow.AddDays(-7)))
                 })
                 .ToListAsync();
-
+             
             return Ok(provinceStats);
         }
 
@@ -475,6 +544,58 @@ namespace Pulse_Connect_API.Controllers
             {
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
+        }
+
+        // GET: api/community/provinces/joined
+        [HttpGet("provinces/joined")]
+        public async Task<ActionResult<IEnumerable<string>>> GetJoinedProvinces()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
+
+            var joinedProvinces = await _context.UserProvinces
+                .Where(up => up.UserId == userId && up.IsActive)
+                .Select(up => up.Province)
+                .ToListAsync();
+
+            return Ok(joinedProvinces);
+        }
+
+        // POST: api/community/provinces/leave
+        [HttpPost("provinces/leave")]
+        public async Task<ActionResult> LeaveProvince(JoinProvinceDto leaveProvinceDto)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
+
+            var validProvinces = new[] { "Eastern Cape", "Free State", "Gauteng", "KwaZulu-Natal", "Limpopo", "Mpumalanga", "North West", "Northern Cape", "Western Cape" };
+            if (!validProvinces.Contains(leaveProvinceDto.Province))
+            {
+                return BadRequest("Invalid province");
+            }
+
+            // Find the user's membership
+            var membership = await _context.UserProvinces
+                .FirstOrDefaultAsync(up => up.UserId == userId && up.Province == leaveProvinceDto.Province);
+
+            if (membership != null)
+            {
+                if (membership.IsActive)
+                {
+                    membership.IsActive = false;
+                    membership.LeftAt = DateTime.UtcNow;
+                    await _context.SaveChangesAsync();
+                }
+                return Ok(new { Message = "Left province successfully" });
+            }
+
+            return NotFound("Membership not found");
         }
     }
 }

@@ -46,5 +46,19 @@
         public List<BadgeDto> PendingBadges { get; set; }
         public int TotalBadges { get; set; }
         public int EarnedCount { get; set; }
+        public double TotalLearningHours { get; set; } // Add this
+        public int CompletedCourses { get; set; } // Add this
     }
+
+    public class CertificateStatsDto
+{
+    public int TotalCoursesCompleted { get; set; }
+    public int TotalChaptersCompleted { get; set; }
+    public int TotalPerfectScores { get; set; }
+    public int DayStreak { get; set; }
+    public int TotalCertificates { get; set; }
+    public decimal TotalLearningHours { get; set; }
+    public int XpPoints { get; set; }
+    public int BadgesEarned { get; set; }
+}
 }

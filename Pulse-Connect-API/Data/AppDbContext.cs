@@ -61,6 +61,23 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
                   .OnDelete(DeleteBehavior.NoAction); // Changed to NoAction
         });
 
+        modelBuilder.Entity<PostLike>(entity =>
+        {
+            entity.HasKey(pl => pl.Id);
+
+            entity.HasOne(pl => pl.Post)
+                  .WithMany(p => p.PostLikes)
+                  .HasForeignKey(pl => pl.PostId)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(pl => pl.User)
+                  .WithMany()
+                  .HasForeignKey(pl => pl.UserId)
+                  .OnDelete(DeleteBehavior.NoAction);
+
+            entity.HasIndex(pl => new { pl.PostId, pl.UserId }).IsUnique();
+        });
+
         modelBuilder.Entity<UserProvince>(entity =>
         {
             entity.HasOne(up => up.User)
@@ -191,6 +208,14 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
                   .OnDelete(DeleteBehavior.Cascade);
         });
 
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.Property(u => u.Address).IsRequired();
+            entity.Property(u => u.Race).IsRequired();
+            entity.Property(u => u.Gender).IsRequired();
+            entity.Property(u => u.DateOfBirth).IsRequired();
+        });
+
         modelBuilder.Entity<Certificate>()
             .HasOne(c => c.TestAttempt)
             .WithMany()
@@ -219,4 +244,6 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
 
     public DbSet<CertificateShare> CertificateShares { get; set; }
 
+
+    public DbSet<PostLike> PostLikes { get; set; }
 }

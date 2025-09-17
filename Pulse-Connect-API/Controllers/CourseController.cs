@@ -856,156 +856,6 @@ namespace Pulse_Connect_API.Controllers
             return Ok();
         }
 
-        // POST: api/course/{courseId}/submit-test (Protected)
-        // POST: api/course/{courseId}/submit-test (Protected)
-        [HttpPost("{courseId}/submit-test")]
-        public async Task<ActionResult<TestAttempt>> SubmitTest(string courseId, [FromBody] SubmitTestDTO submitTestDto)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (string.IsNullOrEmpty(userId))
-            {
-                return Unauthorized("Invalid or missing user ID in token");
-            }
-
-            var user = await _userManager.FindByIdAsync(userId);
-            var enrollment = await _context.Enrollments
-                .Include(e => e.Course)
-                .ThenInclude(c => c.Instructor)
-                .FirstOrDefaultAsync(e => e.UserId == userId && e.CourseId == courseId);
-
-            if (enrollment == null)
-            {
-                return NotFound("Enrollment not found");
-            }
-
-            // GET THE COURSE FROM THE ENROLLMENT
-            var course = enrollment.Course; // This is now available
-
-            var test = await _context.CourseTests
-                .Include(t => t.Questions)
-                .ThenInclude(q => q.Options)
-                .FirstOrDefaultAsync(t => t.CourseId == courseId);
-
-            if (test == null)
-            {
-                return NotFound("Test not found");
-            }
-
-            int correctAnswers = 0;
-            var userAnswers = new List<UserAnswer>();
-
-            foreach (var answer in submitTestDto.Answers)
-            {
-                var question = test.Questions.FirstOrDefault(q => q.Id == answer.QuestionId);
-                if (question == null) continue;
-
-                var selectedOption = question.Options.FirstOrDefault(o => o.Id == answer.SelectedOptionId);
-                if (selectedOption == null) continue;
-
-                var userAnswer = new UserAnswer
-                {
-                    Id = Guid.NewGuid().ToString(),
-                    QuestionId = answer.QuestionId,
-                    SelectedOptionId = answer.SelectedOptionId,
-                    IsCorrect = selectedOption.IsCorrect
-                };
-
-                if (selectedOption.IsCorrect)
-                {
-                    correctAnswers++;
-                }
-
-                userAnswers.Add(userAnswer);
-            }
-
-            int score = test.Questions.Count > 0 ? (int)Math.Round((double)correctAnswers / test.Questions.Count * 100) : 0;
-            bool isPassed = score >= test.PassingScore;
-
-            var attempt = new TestAttempt
-            {
-                Id = Guid.NewGuid().ToString(),
-                EnrollmentId = enrollment.Id,
-                TestId = test.Id,
-                AttemptDate = DateTime.UtcNow,
-                Score = score,
-                IsPassed = isPassed,
-                TotalQuestions = test.Questions.Count,
-                CorrectAnswers = correctAnswers,
-                UserAnswers = userAnswers
-            };
-
-            foreach (var userAnswer in userAnswers)
-            {
-                userAnswer.TestAttemptId = attempt.Id;
-            }
-
-            _context.TestAttempts.Add(attempt);
-            await _context.SaveChangesAsync();
-
-            // AUTO-GENERATE CERTIFICATE IF PASSED - NOW course IS AVAILABLE
-            if (isPassed)
-            {
-                await GenerateCertificateAutomatically(attempt, user, course);
-            }
-
-            // Send test results email to student
-            var studentEmailBody = $@"
-        <h2>Test Results: {test.Title}</h2>
-        <p>Hello {user.FirstName},</p>
-        <p>You have completed the test <strong>{test.Title}</strong> for the course <strong>{course.Title}</strong>.</p>
-        <p><strong>Test Results:</strong></p>
-        <ul>
-            <li><strong>Score:</strong> {score}%</li>
-            <li><strong>Status:</strong> {(isPassed ? "PASSED" : "FAILED")}</li>
-            <li><strong>Correct Answers:</strong> {correctAnswers}/{test.Questions.Count}</li>
-            <li><strong>Passing Score:</strong> {test.PassingScore}%</li>
-            <li><strong>Completion Date:</strong> {attempt.AttemptDate.ToString("f")}</li>
-        </ul>
-        <p>{(isPassed ? "Congratulations on passing the test! You're making great progress." : "Don't worry! You can review the material and try again.")}</p>
-        <p>Keep up the good work!</p>";
-
-            await _emailSender
-                .To(user.Email)
-                .Subject($"Test Results: {test.Title} - {(isPassed ? "PASSED" : "FAILED")}")
-                .Body(studentEmailBody, isHtml: true)
-                .SendAsync();
-
-            // Send test results notification to instructor (only if failed or for monitoring)
-            if (!isPassed || score < 70) // Only notify instructor for failures or low scores
-            {
-                var instructorEmailBody = $@"
-            <h2>Student Test Results: {test.Title}</h2>
-            <p>Hello {course.Instructor.FirstName},</p>
-            <p>A student has completed the test <strong>{test.Title}</strong> in your course <strong>{course.Title}</strong>.</p>
-            <p><strong>Student Details:</strong></p>
-            <ul>
-                <li><strong>Name:</strong> {user.FirstName} {user.LastName}</li>
-                <li><strong>Email:</strong> {user.Email}</li>
-            </ul>
-            <p><strong>Test Results:</strong></p>
-            <ul>
-                <li><strong>Score:</strong> {score}%</li>
-                <li><strong>Status:</strong> {(isPassed ? "PASSED" : "FAILED")}</li>
-                <li><strong>Correct Answers:</strong> {correctAnswers}/{test.Questions.Count}</li>
-                <li><strong>Completion Date:</strong> {attempt.AttemptDate.ToString("f")}</li>
-            </ul>
-            <p>This student may need additional support or review of the material.</p>";
-
-                await _emailSender
-                    .To(course.Instructor.Email)
-                    .Subject($"Student Test Results: {user.FirstName} {user.LastName} - {test.Title}")
-                    .Body(instructorEmailBody, isHtml: true)
-                    .SendAsync();
-            }
-
-            return Ok(attempt);
-        }
-
         private async Task GenerateCertificateAutomatically(TestAttempt attempt, User user, Course course)
         {
             try
@@ -1464,6 +1314,224 @@ namespace Pulse_Connect_API.Controllers
             return Ok(enrollments);
         }
 
+        // POST: api/course/submit-test
+        // POST: api/course/submit-test
+        [HttpPost("submit-test")]
+        public async Task<ActionResult<TestResultDTO>> SubmitTest([FromBody] SubmitTestRequestDTO submitRequest)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("Invalid or missing user ID in token");
+            }
+
+            try
+            {
+                // Get the test with questions and correct answers
+                var test = await _context.CourseTests
+                    .Include(t => t.Questions)
+                    .ThenInclude(q => q.Options)
+                    .Include(t => t.Course)
+                    .ThenInclude(c => c.Instructor)
+                    .FirstOrDefaultAsync(t => t.Id == submitRequest.TestId);
+
+                if (test == null)
+                {
+                    return NotFound("Test not found");
+                }
+
+                // Verify user is enrolled in the course
+                var enrollment = await _context.Enrollments
+                    .Include(e => e.User)
+                    .FirstOrDefaultAsync(e => e.UserId == userId && e.CourseId == test.CourseId);
+
+                if (enrollment == null)
+                {
+                    return Forbid("You must be enrolled in the course to take the test");
+                }
+
+                var user = enrollment.User;
+                var course = test.Course;
+
+                // Calculate score
+                int correctAnswers = 0;
+                var userAnswers = new List<UserAnswer>();
+
+                foreach (var userAnswer in submitRequest.Answers)
+                {
+                    var question = test.Questions.FirstOrDefault(q => q.Id == userAnswer.QuestionId);
+                    if (question == null) continue;
+
+                    var selectedOption = question.Options.FirstOrDefault(o => o.Id == userAnswer.SelectedOptionId);
+                    if (selectedOption == null) continue;
+
+                    bool isCorrect = selectedOption.IsCorrect;
+
+                    if (isCorrect)
+                    {
+                        correctAnswers++;
+                    }
+
+                    userAnswers.Add(new UserAnswer
+                    {
+                        Id = Guid.NewGuid().ToString(),
+                        QuestionId = userAnswer.QuestionId,
+                        SelectedOptionId = userAnswer.SelectedOptionId,
+                        IsCorrect = isCorrect
+                    });
+                }
+
+                // Calculate percentage score
+                int score = test.Questions.Count > 0
+                    ? (int)Math.Round((double)correctAnswers / test.Questions.Count * 100)
+                    : 0;
+
+                bool isPassed = score >= test.PassingScore;
+
+                // Save test attempt
+                var attempt = new TestAttempt
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    EnrollmentId = enrollment.Id,
+                    TestId = test.Id,
+                    AttemptDate = DateTime.UtcNow,
+                    Score = score,
+                    IsPassed = isPassed,
+                    TotalQuestions = test.Questions.Count,
+                    CorrectAnswers = correctAnswers,
+                    UserAnswers = userAnswers
+                };
+
+                // Set foreign key for user answers
+                foreach (var answer in userAnswers)
+                {
+                    answer.TestAttemptId = attempt.Id;
+                }
+
+                _context.TestAttempts.Add(attempt);
+                await _context.SaveChangesAsync();
+
+                // AUTO-GENERATE CERTIFICATE IF PASSED
+                if (isPassed)
+                {
+                    await GenerateCertificateAutomatically(attempt, user, course);
+                }
+
+                // Send test results email to student
+                var studentEmailBody = $@"
+            <h2>Test Results: {test.Title}</h2>
+            <p>Hello {user.FirstName},</p>
+            <p>You have completed the test <strong>{test.Title}</strong> for the course <strong>{course.Title}</strong>.</p>
+            <p><strong>Test Results:</strong></p>
+            <ul>
+                <li><strong>Score:</strong> {score}%</li>
+                <li><strong>Status:</strong> {(isPassed ? "PASSED" : "FAILED")}</li>
+                <li><strong>Correct Answers:</strong> {correctAnswers}/{test.Questions.Count}</li>
+                <li><strong>Passing Score:</strong> {test.PassingScore}%</li>
+                <li><strong>Completion Date:</strong> {attempt.AttemptDate.ToString("f")}</li>
+            </ul>
+            <p>{(isPassed ? "Congratulations on passing the test! You're making great progress." : "Don't worry! You can review the material and try again.")}</p>
+            <p>Keep up the good work!</p>";
+
+                await _emailSender
+                    .To(user.Email)
+                    .Subject($"Test Results: {test.Title} - {(isPassed ? "PASSED" : "FAILED")}")
+                    .Body(studentEmailBody, isHtml: true)
+                    .SendAsync();
+
+                // Send test results notification to instructor (only if failed or for monitoring)
+                if (!isPassed || score < 70) // Only notify instructor for failures or low scores
+                {
+                    var instructorEmailBody = $@"
+                <h2>Student Test Results: {test.Title}</h2>
+                <p>Hello {course.Instructor.FirstName},</p>
+                <p>A student has completed the test <strong>{test.Title}</strong> in your course <strong>{course.Title}</strong>.</p>
+                <p><strong>Student Details:</strong></p>
+                <ul>
+                    <li><strong>Name:</strong> {user.FirstName} {user.LastName}</li>
+                    <li><strong>Email:</strong> {user.Email}</li>
+                </ul>
+                <p><strong>Test Results:</strong></p>
+                <ul>
+                    <li><strong>Score:</strong> {score}%</li>
+                    <li><strong>Status:</strong> {(isPassed ? "PASSED" : "FAILED")}</li>
+                    <li><strong>Correct Answers:</strong> {correctAnswers}/{test.Questions.Count}</li>
+                    <li><strong>Completion Date:</strong> {attempt.AttemptDate.ToString("f")}</li>
+                </ul>
+                <p>This student may need additional support or review of the material.</p>";
+
+                    await _emailSender
+                        .To(course.Instructor.Email)
+                        .Subject($"Student Test Results: {user.FirstName} {user.LastName} - {test.Title}")
+                        .Body(instructorEmailBody, isHtml: true)
+                        .SendAsync();
+                }
+
+                // Generate success message
+                string message = isPassed
+                    ? $"Congratulations! You passed the test with a score of {score}%."
+                    : $"You scored {score}% but didn't pass. The passing score is {test.PassingScore}%.";
+
+                // Return result
+                var result = new TestResultDTO
+                {
+                    AttemptId = attempt.Id,
+                    Score = score,
+                    IsPassed = isPassed,
+                    CorrectAnswers = correctAnswers,
+                    TotalQuestions = test.Questions.Count,
+                    Message = message,
+                    AttemptDate = attempt.AttemptDate
+                };
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error submitting test: {ex.Message}");
+                return StatusCode(500, "An error occurred while processing your test submission");
+            }
+        }
+
+        // GET: api/course/{courseId}/test-attempts
+        [HttpGet("{courseId}/test-attempts")]
+        public async Task<ActionResult<IEnumerable<TestAttemptDTO>>> GetTestAttempts(string courseId)
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("Invalid or missing user ID in token");
+            }
+
+            var enrollment = await _context.Enrollments
+                .FirstOrDefaultAsync(e => e.UserId == userId && e.CourseId == courseId);
+
+            if (enrollment == null)
+            {
+                return NotFound("Enrollment not found");
+            }
+
+            var attempts = await _context.TestAttempts
+                .Where(ta => ta.EnrollmentId == enrollment.Id)
+                .OrderByDescending(ta => ta.AttemptDate)
+                .Select(ta => new TestAttemptDTO
+                {
+                    Id = ta.Id,
+                    Score = ta.Score,
+                    IsPassed = ta.IsPassed,
+                    CorrectAnswers = ta.CorrectAnswers,
+                    TotalQuestions = ta.TotalQuestions,
+                    AttemptDate = ta.AttemptDate
+                })
+                .ToListAsync();
+
+            return Ok(attempts);
+        }
 
 
     }

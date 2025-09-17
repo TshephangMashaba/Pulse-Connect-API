@@ -1,8 +1,16 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\profile-pictures\\01177f79-ee0e-4881-84f9-3ebf7a8c1f6a_Tshephang.png",
+      "PackagePath": "staticwebassets\\profile-pictures\\01177f79-ee0e-4881-84f9-3ebf7a8c1f6a_Tshephang.png"
+    },
+    {
       "Id": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\profile-pictures\\a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png",
       "PackagePath": "staticwebassets\\profile-pictures\\a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png"
+    },
+    {
+      "Id": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\025ea461-0817-42d8-b617-ce05c8e308fc_signature (2).png",
+      "PackagePath": "staticwebassets\\uploads\\025ea461-0817-42d8-b617-ce05c8e308fc_signature (2).png"
     },
     {
       "Id": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.png",
@@ -107,6 +115,10 @@
     {
       "Id": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\e40c1afe-cb36-4513-9e9d-bf13c18fac07_ibali_logo_horizontal_v05.png",
       "PackagePath": "staticwebassets\\uploads\\posts\\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\\e40c1afe-cb36-4513-9e9d-bf13c18fac07_ibali_logo_horizontal_v05.png"
+    },
+    {
+      "Id": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\wwwroot\\uploads\\posts\\bf9285bd-ac9a-4a2f-8fe6-b7beda178320\\e72f543b-1b57-491b-866f-60e5a90ceeca_signature (1).png",
+      "PackagePath": "staticwebassets\\uploads\\posts\\bf9285bd-ac9a-4a2f-8fe6-b7beda178320\\e72f543b-1b57-491b-866f-60e5a90ceeca_signature (1).png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Pulse-Connect-API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

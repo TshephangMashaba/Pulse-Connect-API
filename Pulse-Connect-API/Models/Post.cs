@@ -38,6 +38,8 @@ namespace Pulse_Connect_API.Models
 
         public ICollection<Comment> Comments { get; set; } = new List<Comment>();
         public ICollection<PostImage> Images { get; set; } = new List<PostImage>();
+
+        public ICollection<PostLike> PostLikes { get; set; } = new List<PostLike>();
     }
 
     public enum PostType
@@ -47,6 +49,26 @@ namespace Pulse_Connect_API.Models
         Resource,
         Event
     }
-    
+
+    public class PostLike
+    {
+        [Key]
+        public string Id { get; set; } = Guid.NewGuid().ToString();
+
+        [Required]
+        public string PostId { get; set; }
+
+        [ForeignKey("PostId")]
+        public Post Post { get; set; }
+
+        [Required]
+        public string UserId { get; set; }
+
+        [ForeignKey("UserId")]
+        public User User { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    }
+
 
 }

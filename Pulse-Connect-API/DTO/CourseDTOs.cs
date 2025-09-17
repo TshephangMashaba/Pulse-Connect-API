@@ -1,4 +1,6 @@
-﻿namespace Pulse_Connect_API.DTOs
+﻿using Pulse_Connect_API.Migrations;
+
+namespace Pulse_Connect_API.DTOs
 {
     public class CreateCourseDTO
     {
@@ -111,4 +113,35 @@
         public string Description { get; set; }
         public int PassingScore { get; set; }
     }
+
+    // Add these to your DTOs section
+    public class SubmitTestRequestDTO
+    {
+        public string TestId { get; set; }
+        public List<TestAnswerDTO> Answers { get; set; }
+    }
+
+    public class TestResultDTO
+    {
+        public string AttemptId { get; set; }
+        public int Score { get; set; }
+        public bool IsPassed { get; set; }
+        public int CorrectAnswers { get; set; }
+        public int TotalQuestions { get; set; }
+        public string Message { get; set; }
+        public DateTime AttemptDate { get; set; }
+    }
+
+    public class TestAttemptDTO
+    {
+        public string Id { get; set; }
+        public int Score { get; set; }
+        public bool IsPassed { get; set; }
+        public int CorrectAnswers { get; set; }
+        public int TotalQuestions { get; set; }
+        public DateTime AttemptDate { get; set; }
+    }
+
+
+    
 }

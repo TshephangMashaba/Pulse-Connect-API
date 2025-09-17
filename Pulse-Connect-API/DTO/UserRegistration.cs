@@ -26,13 +26,13 @@ namespace Pulse_Connect_API.DTO
         public DateTime DateOfBirth { get; set; }
 
         [Required]
-        public string Address { get; set; }
+        public string? Address { get; set; }
 
         [Required]
-        public string Race { get; set; }
+        public string? Race { get; set; }
 
         [Required]
-        public string Gender { get; set; }
+        public string? Gender { get; set; }
     }
 
     public class UserLoginDTO
@@ -75,16 +75,17 @@ namespace Pulse_Connect_API.DTO
         public string ConfirmPassword { get; set; }
     }
 
+
     public class UpdateProfileDTO
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string PhoneNumber { get; set; }
-        public DateTime? DateOfBirth { get; set; }
-        public string Address { get; set; }
-        public string Race { get; set; }
-        public string Gender { get; set; }
-        public IFormFile ProfilePicture { get; set; } // Added for profile picture
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
+        public string DateOfBirth { get; set; } = string.Empty; // Changed to string
+        public string Address { get; set; } = string.Empty;
+        public string Race { get; set; } = string.Empty;
+        public string Gender { get; set; } = string.Empty;
+        public IFormFile ProfilePicture { get; set; }
     }
 
     public class RegistrationResponseDTO

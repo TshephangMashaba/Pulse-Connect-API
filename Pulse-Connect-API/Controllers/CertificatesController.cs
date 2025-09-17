@@ -34,14 +34,14 @@ namespace Pulse_Connect_API.Controllers
             IFluentEmail emailSender,
             IWebHostEnvironment environment,
             ILogger<CertificatesController> logger)
-     
+
 
         {
             _context = context;
             _userManager = userManager;
             _emailSender = emailSender;
             _environment = environment;
-             _logger = logger;
+            _logger = logger;
         }
 
         // GET: api/certificates/my-certificates
@@ -394,21 +394,25 @@ namespace Pulse_Connect_API.Controllers
                 return Unauthorized("Invalid or missing user ID in token");
             }
 
-            var certificateCount = await _context.Certificates
+            // Count DISTINCT courses with certificates, not total certificates
+            var completedCourseCount = await _context.Certificates
                 .Where(c => c.UserId == userId)
+                .GroupBy(c => c.CourseId)
                 .CountAsync();
 
-            // Calculate XP and badges based on certificates
-            var xpPoints = certificateCount * 250;
-            var badgesEarned = certificateCount >= 3 ? 2 : certificateCount >= 1 ? 1 : 0;
+            // Calculate XP and badges based on completed courses
+            var xpPoints = completedCourseCount * 250;
+            var badgesEarned = completedCourseCount >= 3 ? 2 : completedCourseCount >= 1 ? 1 : 0;
 
             return Ok(new
             {
-                TotalCertificates = certificateCount,
+                TotalCoursesCompleted = completedCourseCount, // Renamed for clarity
                 XpPoints = xpPoints,
                 BadgesEarned = badgesEarned
             });
         }
+
+
         [HttpPost("{certificateId}/share")]
         public async Task<IActionResult> ShareCertificate(string certificateId, [FromBody] ShareRequestDto shareRequest)
         {
@@ -454,10 +458,20 @@ namespace Pulse_Connect_API.Controllers
                     return Unauthorized("Invalid or missing user ID in token");
                 }
 
-                // Get user certificates
-                var certificates = await _context.Certificates
+                // Get DISTINCT courses completed (not just certificate count)
+                var completedCourses = await _context.Certificates
                     .Where(c => c.UserId == userId)
+                    .GroupBy(c => c.CourseId)
+                    .Select(g => new
+                    {
+                        CourseId = g.Key,
+                        HighestScore = g.Max(c => c.Score),
+                        HasPerfectScore = g.Any(c => c.Score == 100)
+                    })
                     .ToListAsync();
+
+                var completedCourseCount = completedCourses.Count;
+                var perfectScoreCourses = completedCourses.Count(c => c.HasPerfectScore);
 
                 // Get test attempts with enrollment data
                 var testAttempts = await _context.TestAttempts
@@ -489,7 +503,7 @@ namespace Pulse_Connect_API.Controllers
                     .Where(x => x.Duration <= 1)
                     .CountAsync();
 
-                // Create badges list
+                // Create badges list - NOW USING completedCourseCount INSTEAD OF certificates.Count
                 var badges = new List<BadgeDto>
         {
             new BadgeDto
@@ -498,8 +512,8 @@ namespace Pulse_Connect_API.Controllers
                 Name = "Health Champion",
                 Description = "Complete 3 courses",
                 Icon = "🏆",
-                Earned = certificates.Count >= 3,
-                Progress = Math.Min(certificates.Count, 3),
+                Earned = completedCourseCount >= 3,
+                Progress = Math.Min(completedCourseCount, 3),
                 Target = 3,
                 Category = "completion"
             },
@@ -542,8 +556,8 @@ namespace Pulse_Connect_API.Controllers
                 Name = "Knowledge Seeker",
                 Description = "Complete 5 courses",
                 Icon = "📚",
-                Earned = certificates.Count >= 5,
-                Progress = Math.Min(certificates.Count, 5),
+                Earned = completedCourseCount >= 5,
+                Progress = Math.Min(completedCourseCount, 5),
                 Target = 5,
                 Category = "completion"
             },
@@ -564,8 +578,8 @@ namespace Pulse_Connect_API.Controllers
                 Name = "Certified Pro",
                 Description = "Earn 10 certificates",
                 Icon = "⭐",
-                Earned = certificates.Count >= 10,
-                Progress = Math.Min(certificates.Count, 10),
+                Earned = completedCourseCount >= 10, // Changed to course count
+                Progress = Math.Min(completedCourseCount, 10),
                 Target = 10,
                 Category = "mastery"
             },
@@ -575,8 +589,8 @@ namespace Pulse_Connect_API.Controllers
                 Name = "Perfect Score",
                 Description = "Get 100% on 3 different courses",
                 Icon = "💯",
-                Earned = certificates.Count(c => c.Score == 100) >= 3,
-                Progress = Math.Min(certificates.Count(c => c.Score == 100), 3),
+                Earned = perfectScoreCourses >= 3, // Now counts unique courses with perfect score
+                Progress = Math.Min(perfectScoreCourses, 3),
                 Target = 3,
                 Category = "excellence"
             }
@@ -601,5 +615,6 @@ namespace Pulse_Connect_API.Controllers
                 return StatusCode(500, "An error occurred while retrieving achievements");
             }
         }
+
     }
 }

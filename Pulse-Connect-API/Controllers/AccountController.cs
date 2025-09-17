@@ -20,7 +20,7 @@ namespace Pulse_Connect_API.Controllers
     public class AccountController : ControllerBase
     {
         private readonly UserManager<User> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly RoleManager<Role> _roleManager; // Change from IdentityRole to Role
         private readonly IMapper _mapper;
         private readonly JwtService _jwtService;
         private readonly IMemoryCache _cache;
@@ -28,20 +28,19 @@ namespace Pulse_Connect_API.Controllers
 
         public AccountController(
             UserManager<User> userManager,
-            RoleManager<IdentityRole> roleManager,
+            RoleManager<Role> roleManager, // Change from IdentityRole to Role
             IMapper mapper,
             JwtService jwtService,
             IMemoryCache cache,
             IFluentEmail emailSender)
         {
             _userManager = userManager;
-            _roleManager = roleManager;
+            _roleManager = roleManager; // Updated
             _mapper = mapper;
             _jwtService = jwtService;
             _cache = cache;
             _emailSender = emailSender;
         }
-
 
         /// <summary>
         /// Registers a new user for Pulse Connect
@@ -264,6 +263,23 @@ namespace Pulse_Connect_API.Controllers
 
             var roles = await _userManager.GetRolesAsync(user);
 
+            // Build full profile picture URL if it exists
+            string profilePhotoUrl = null;
+            if (!string.IsNullOrEmpty(user.ProfilePicture))
+            {
+                // If it's already a full URL, use as-is
+                if (user.ProfilePicture.StartsWith("http://") || user.ProfilePicture.StartsWith("https://"))
+                {
+                    profilePhotoUrl = user.ProfilePicture;
+                }
+                else
+                {
+                    // Build full URL for relative paths
+                    var cleanPath = user.ProfilePicture.StartsWith("/") ? user.ProfilePicture : $"/{user.ProfilePicture}";
+                    profilePhotoUrl = $"{Request.Scheme}://{Request.Host}{cleanPath}";
+                }
+            }
+
             return Ok(new
             {
                 user.Id,
@@ -275,73 +291,149 @@ namespace Pulse_Connect_API.Controllers
                 user.Address,
                 user.Race,
                 user.Gender,
+                ProfilePhoto = profilePhotoUrl, // Make sure this matches your frontend interface
                 Roles = roles
             });
         }
-        /// <summary>
-        /// Updates user profile
-        /// </summary>
+
         [Authorize]
         [HttpPut("profile")]
         public async Task<IActionResult> UpdateProfile([FromForm] UpdateProfileDTO request)
         {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
-                return NotFound("User not found");
-
-            // Update basic profile fields
-            user.FirstName = request.FirstName ?? user.FirstName;
-            user.LastName = request.LastName ?? user.LastName;
-            user.PhoneNumber = request.PhoneNumber ?? user.PhoneNumber;
-            user.DateOfBirth = request.DateOfBirth ?? user.DateOfBirth;
-            user.Address = request.Address ?? user.Address;
-            user.Race = request.Race ?? user.Race;
-            user.Gender = request.Gender ?? user.Gender;
-
-            // Handle profile picture upload
-            if (request.ProfilePicture != null && request.ProfilePicture.Length > 0)
+            try
             {
-                // Delete old profile picture if exists
-                if (!string.IsNullOrEmpty(user.ProfilePicture))
+                Console.WriteLine($"=== UPDATE PROFILE REQUEST ===");
+                Console.WriteLine($"FirstName: {request.FirstName}");
+                Console.WriteLine($"LastName: {request.LastName}");
+                Console.WriteLine($"PhoneNumber: {request.PhoneNumber}");
+                Console.WriteLine($"DateOfBirth: {request.DateOfBirth}");
+                Console.WriteLine($"Address: {request.Address}");
+                Console.WriteLine($"Race: {request.Race}");
+                Console.WriteLine($"Gender: {request.Gender}");
+                Console.WriteLine($"ProfilePicture: {request.ProfilePicture?.FileName}");
+
+                // Manual validation
+                if (string.IsNullOrWhiteSpace(request.FirstName))
                 {
-                    var oldFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", user.ProfilePicture);
-                    if (System.IO.File.Exists(oldFilePath))
+                    return BadRequest(new { errors = new[] { "First name is required" } });
+                }
+
+                if (string.IsNullOrWhiteSpace(request.LastName))
+                {
+                    return BadRequest(new { errors = new[] { "Last name is required" } });
+                }
+
+                var user = await _userManager.GetUserAsync(User);
+                if (user == null)
+                {
+                    return NotFound(new { errors = new[] { "User not found" } });
+                }
+
+                // Update fields
+                user.FirstName = request.FirstName;
+                user.LastName = request.LastName;
+                user.PhoneNumber = string.IsNullOrEmpty(request.PhoneNumber) ? null : request.PhoneNumber;
+
+                // Parse DateOfBirth from string
+                if (!string.IsNullOrEmpty(request.DateOfBirth) && DateTime.TryParse(request.DateOfBirth, out var dateOfBirth))
+                {
+                    user.DateOfBirth = dateOfBirth;
+                }
+                else
+                {
+                    user.DateOfBirth = null;
+                }
+
+                user.Address = string.IsNullOrEmpty(request.Address) ? null : request.Address;
+                user.Race = string.IsNullOrEmpty(request.Race) ? null : request.Race;
+                user.Gender = string.IsNullOrEmpty(request.Gender) ? null : request.Gender;
+
+                // Handle profile picture upload
+                if (request.ProfilePicture != null && request.ProfilePicture.Length > 0)
+                {
+                    Console.WriteLine($"Processing profile picture: {request.ProfilePicture.FileName}");
+
+                    // Validate file type
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".jfif" };
+                    var fileExtension = Path.GetExtension(request.ProfilePicture.FileName).ToLower();
+
+                    if (!allowedExtensions.Contains(fileExtension))
                     {
-                        System.IO.File.Delete(oldFilePath);
+                        return BadRequest(new { errors = new[] { "Invalid file type. Only JPG, JPEG, PNG, GIF, and JFIF are allowed." } });
                     }
+
+                    // Validate file size (5MB)
+                    if (request.ProfilePicture.Length > 5 * 1024 * 1024)
+                    {
+                        return BadRequest(new { errors = new[] { "File size too large. Maximum size is 5MB." } });
+                    }
+
+                    // Delete old profile picture if exists
+                    if (!string.IsNullOrEmpty(user.ProfilePicture))
+                    {
+                        var oldFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", user.ProfilePicture);
+                        if (System.IO.File.Exists(oldFilePath))
+                        {
+                            System.IO.File.Delete(oldFilePath);
+                        }
+                    }
+
+                    // Save new profile picture
+                    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "profile-pictures");
+                    if (!Directory.Exists(uploadsFolder))
+                    {
+                        Directory.CreateDirectory(uploadsFolder);
+                    }
+
+                    var uniqueFileName = $"{Guid.NewGuid()}_{Path.GetFileName(request.ProfilePicture.FileName)}";
+                    var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await request.ProfilePicture.CopyToAsync(fileStream);
+                    }
+
+                    user.ProfilePicture = $"profile-pictures/{uniqueFileName}";
+                    Console.WriteLine($"Profile picture saved: {user.ProfilePicture}");
                 }
 
-                // Save new profile picture
-                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "profile-pictures");
-                if (!Directory.Exists(uploadsFolder))
+                var result = await _userManager.UpdateAsync(user);
+                if (!result.Succeeded)
                 {
-                    Directory.CreateDirectory(uploadsFolder);
+                    var errorMessages = result.Errors.Select(e => e.Description).ToArray();
+                    Console.WriteLine($"UserManager update errors: {string.Join(", ", errorMessages)}");
+
+                    return BadRequest(new { errors = errorMessages });
                 }
 
-                var uniqueFileName = $"{Guid.NewGuid()}_{request.ProfilePicture.FileName}";
-                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                Console.WriteLine("Profile updated successfully");
+                return Ok(new
                 {
-                    await request.ProfilePicture.CopyToAsync(fileStream);
-                }
-
-                user.ProfilePicture = Path.Combine("profile-pictures", uniqueFileName);
+                    Message = "Profile updated successfully",
+                    ProfilePictureUrl = user.ProfilePicture != null ?
+                        $"{Request.Scheme}://{Request.Host}/{user.ProfilePicture}" : null
+                });
             }
-
-            var result = await _userManager.UpdateAsync(user);
-            if (!result.Succeeded)
-                return BadRequest(result.Errors.Select(e => e.Description));
-
-            return Ok(new
+            catch (Exception ex)
             {
-                Message = "Profile updated successfully",
-                ProfilePictureUrl = user.ProfilePicture != null ?
-                    $"{Request.Scheme}://{Request.Host}/{user.ProfilePicture}" : null
-            });
+                Console.WriteLine($"=== EXCEPTION IN UPDATEPROFILE ===");
+                Console.WriteLine($"Message: {ex.Message}");
+                Console.WriteLine($"StackTrace: {ex.StackTrace}");
+
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine($"Inner Exception: {ex.InnerException.Message}");
+                }
+
+                return StatusCode(500, new
+                {
+                    errors = new[] { "An unexpected error occurred while updating the profile." }
+                });
+            }
         }
 
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "USER")]
+
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [HttpGet("users")]
         public async Task<IActionResult> GetAllUsers()
         {
@@ -360,7 +452,7 @@ namespace Pulse_Connect_API.Controllers
                         LastName = user.LastName,
                         Email = user.Email,
                         PhoneNumber = user.PhoneNumber,
-                        DateOfBirth = user.DateOfBirth,
+                        DateOfBirth = (DateTime)user.DateOfBirth,
                         Address = user.Address,
                         Race = user.Race,
                         Gender = user.Gender,
@@ -379,7 +471,7 @@ namespace Pulse_Connect_API.Controllers
             }
         }
 
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "USER")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [HttpGet("users/{id}")]
         public async Task<IActionResult> GetUserById(string id)
         {
@@ -398,7 +490,7 @@ namespace Pulse_Connect_API.Controllers
                     LastName = user.LastName,
                     Email = user.Email,
                     PhoneNumber = user.PhoneNumber,
-                    DateOfBirth = user.DateOfBirth,
+                    DateOfBirth = (DateTime)user.DateOfBirth,
                     Address = user.Address,
                     Race = user.Race,
                     Gender = user.Gender,
@@ -421,7 +513,7 @@ namespace Pulse_Connect_API.Controllers
         /// <summary>
         /// Updates user roles (Admin only)
         /// </summary>
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "USER")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [HttpPut("users/{id}/roles")]
         public async Task<IActionResult> UpdateUserRoles(string id, [FromBody] UpdateUserRolesDTO request)
         {
@@ -469,7 +561,7 @@ namespace Pulse_Connect_API.Controllers
         /// <summary>
         /// Toggles user active status (Admin only)
         /// </summary>
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "USER")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [HttpPost("users/{id}/toggle-active")]
         public async Task<IActionResult> ToggleUserActiveStatus(string id)
         {
@@ -527,7 +619,7 @@ namespace Pulse_Connect_API.Controllers
         /// <summary>
         /// Gets available roles (Admin only)
         /// </summary>
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "USER")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [HttpGet("roles")]
         public IActionResult GetAvailableRoles()
         {
