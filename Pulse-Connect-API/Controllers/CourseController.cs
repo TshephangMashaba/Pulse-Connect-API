@@ -290,121 +290,156 @@ namespace Pulse_Connect_API.Controllers
 
         [HttpPost("{courseId}/chapter")]
         public async Task<ActionResult<Chapter>> AddChapter(
-       string courseId,
-       [FromForm] string Title,
-       [FromForm] string Content,
-       [FromForm] string MediaUrl = null,
-       [FromForm] string MediaType = null,
-       IFormFile MediaFile = null)
+        string courseId,
+        [FromForm] string Title,
+        [FromForm] string Content,
+        [FromForm] string MediaUrl = null,
+        [FromForm] string MediaType = null,
+        IFormFile MediaFile = null)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest(ModelState);
-            }
-
-            // Create the DTO manually
-            var createChapterDto = new CreateChapterDTO
-            {
-                Title = Title,
-                Content = Content,
-                MediaUrl = MediaUrl,
-                MediaType = MediaType
-            };
-
-            // Rest of your existing code...
-            var course = await _context.Courses
-                .Include(c => c.Instructor)
-                .Include(c => c.Enrollments)
-                .ThenInclude(e => e.User)
-                .FirstOrDefaultAsync(c => c.Id == courseId);
-
-            if (course == null)
-            {
-                return NotFound("Course not found");
-            }
-
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (string.IsNullOrEmpty(userId) || course.InstructorId != userId)
-            {
-                return Forbid("You do not have permission to add chapters to this course");
-            }
-
-            // Calculate next order number
-            int nextOrder = await _context.Chapters
-                .Where(c => c.CourseId == courseId)
-                .OrderByDescending(c => c.Order)
-                .Select(c => c.Order)
-                .FirstOrDefaultAsync() + 1;
-
-            string mediaUrl = createChapterDto.MediaUrl;
-            string mediaType = createChapterDto.MediaType;
-
-            // Handle file upload if provided
-            if (MediaFile != null && MediaFile.Length > 0)
-            {
-                try
+                if (!ModelState.IsValid)
                 {
-                    // Create uploads directory if it doesn't exist
-                    var uploadsDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
-                    if (!Directory.Exists(uploadsDir))
-                        Directory.CreateDirectory(uploadsDir);
+                    // Return validation errors as JSON, not HTML
+                    var errors = ModelState.Values
+                        .SelectMany(v => v.Errors)
+                        .Select(e => e.ErrorMessage)
+                        .ToList();
 
-                    // Generate unique filename
-                    var fileName = $"{Guid.NewGuid()}_{Path.GetFileName(MediaFile.FileName)}";
-                    var filePath = Path.Combine(uploadsDir, fileName);
-
-                    // Save the file
-                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    return BadRequest(new
                     {
-                        await MediaFile.CopyToAsync(stream);
+                        message = "Validation failed",
+                        errors = errors
+                    });
+                }
+
+                // Validate required fields
+                if (string.IsNullOrWhiteSpace(Title))
+                {
+                    return BadRequest(new { message = "Title is required" });
+                }
+
+                if (string.IsNullOrWhiteSpace(Content))
+                {
+                    return BadRequest(new { message = "Content is required" });
+                }
+
+                var course = await _context.Courses
+                    .Include(c => c.Instructor)
+                    .Include(c => c.Enrollments)
+                    .ThenInclude(e => e.User)
+                    .FirstOrDefaultAsync(c => c.Id == courseId);
+
+                if (course == null)
+                {
+                    return NotFound(new { message = "Course not found" });
+                }
+
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userId) || course.InstructorId != userId)
+                {
+                    return Forbid("You do not have permission to add chapters to this course");
+                }
+
+                // Calculate next order number
+                int nextOrder = await _context.Chapters
+                    .Where(c => c.CourseId == courseId)
+                    .OrderByDescending(c => c.Order)
+                    .Select(c => c.Order)
+                    .FirstOrDefaultAsync() + 1;
+
+                string finalMediaUrl = MediaUrl;
+                string finalMediaType = MediaType;
+
+                // Handle file upload if provided
+                if (MediaFile != null && MediaFile.Length > 0)
+                {
+                    try
+                    {
+                        // Create uploads directory if it doesn't exist
+                        var uploadsDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+                        if (!Directory.Exists(uploadsDir))
+                            Directory.CreateDirectory(uploadsDir);
+
+                        // Generate unique filename
+                        var fileName = $"{Guid.NewGuid()}_{Path.GetFileName(MediaFile.FileName)}";
+                        var filePath = Path.Combine(uploadsDir, fileName);
+
+                        // Save the file
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await MediaFile.CopyToAsync(stream);
+                        }
+
+                        finalMediaUrl = $"{Request.Scheme}://{Request.Host}/uploads/{fileName}";
+                        finalMediaType = GetMediaTypeFromFileName(MediaFile.FileName);
                     }
-
-                    mediaUrl = $"{Request.Scheme}://{Request.Host}/uploads/{fileName}";
-                    mediaType = GetMediaTypeFromFileName(MediaFile.FileName);
+                    catch (Exception ex)
+                    {
+                        return StatusCode(500, new { message = $"Error uploading file: {ex.Message}" });
+                    }
                 }
-                catch (Exception ex)
+
+                var chapter = new Chapter
                 {
-                    return StatusCode(500, $"Error uploading file: {ex.Message}");
-                }
-            }
+                    Id = Guid.NewGuid().ToString(),
+                    Title = Title,
+                    Content = Content, // This preserves the HTML content from TinyMCE
+                    Order = nextOrder,
+                    MediaUrl = finalMediaUrl,
+                    MediaType = finalMediaType,
+                    CourseId = courseId
+                };
 
-            var chapter = new Chapter
-            {
-                Id = Guid.NewGuid().ToString(),
-                Title = createChapterDto.Title,
-                Content = createChapterDto.Content,
-                Order = nextOrder,
-                MediaUrl = mediaUrl,
-                MediaType = mediaType,
-                CourseId = courseId
-            };
+                _context.Chapters.Add(chapter);
+                await _context.SaveChangesAsync();
 
-            _context.Chapters.Add(chapter);
-            await _context.SaveChangesAsync();
-
-            // Send new chapter notification to enrolled students
-            foreach (var enrollment in course.Enrollments)
-            {
-                if (enrollment.User != null)
+                // Send new chapter notification to enrolled students
+                foreach (var enrollment in course.Enrollments)
                 {
-                    var studentEmailBody = $@"
+                    if (enrollment.User != null)
+                    {
+                        var studentEmailBody = $@"
                 <h2>New Chapter Available</h2>
                 <p>Hello {enrollment.User.FirstName},</p>
                 <p>A new chapter <strong>{chapter.Title}</strong> has been added to the course <strong>{course.Title}</strong>.</p>
                 <p>You can now access this new content and continue your learning journey.</p>
                 <p>Happy learning!</p>";
 
-                    await _emailSender
-                        .To(enrollment.User.Email)
-                        .Subject($"New Chapter: {chapter.Title} - {course.Title}")
-                        .Body(studentEmailBody, isHtml: true)
-                        .SendAsync();
+                        await _emailSender
+                            .To(enrollment.User.Email)
+                            .Subject($"New Chapter: {chapter.Title} - {course.Title}")
+                            .Body(studentEmailBody, isHtml: true)
+                            .SendAsync();
+                    }
                 }
+
+                // Return the created chapter with proper JSON formatting
+                return CreatedAtAction(nameof(GetChapter), new { courseId, chapterId = chapter.Id }, new
+                {
+                    Id = chapter.Id,
+                    Title = chapter.Title,
+                    Content = chapter.Content, // HTML content is preserved here
+                    Order = chapter.Order,
+                    MediaUrl = chapter.MediaUrl,
+                    MediaType = chapter.MediaType,
+                    CourseId = chapter.CourseId
+                });
             }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine($"Error adding chapter: {ex.Message}");
 
-            return CreatedAtAction(nameof(GetChapter), new { courseId, chapterId = chapter.Id }, chapter);
+                // Return a proper JSON error response
+                return StatusCode(500, new
+                {
+                    message = "An error occurred while adding the chapter",
+                    error = ex.Message
+                });
+            }
         }
-
         private string GetMediaTypeFromFileName(string fileName)
         {
             var extension = Path.GetExtension(fileName).ToLower();
