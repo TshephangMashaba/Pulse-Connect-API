@@ -1,4 +1,4 @@
-﻿using Pulse_Connect_API.Migrations;
+﻿
 
 namespace Pulse_Connect_API.DTOs
 {
@@ -39,8 +39,8 @@ namespace Pulse_Connect_API.DTOs
         public string Title { get; set; }
         public string Content { get; set; }
         public int Order { get; set; }
-        public string MediaUrl { get; set; }
-        public string MediaType { get; set; }
+        public string? MediaUrl { get; set; }
+        public string? MediaType { get; set; }
         public string CourseId { get; set; }
     }
 

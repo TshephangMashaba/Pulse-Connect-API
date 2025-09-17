@@ -246,8 +246,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Models\\Enrollment.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwBcAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T12:48:59.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-07T12:48:59.502Z"
             },
             {
               "$type": "Document",
@@ -259,8 +258,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\DTO\\CourseDTOs.cs",
               "ViewState": "AgIAAH4AAAAAAAAAAAAzwIcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T12:50:38.092Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-07T12:50:38.092Z"
             },
             {
               "$type": "Document",
@@ -285,8 +283,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Controllers\\CertificatesController.cs",
               "ViewState": "AgIAAEoCAAAAAAAAAAAkwFgCAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T19:26:40.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T19:26:40.493Z"
             },
             {
               "$type": "Document",
@@ -298,8 +295,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\DTO\\CertificateDTO.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAAADIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T19:35:26.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T19:35:26.952Z"
             },
             {
               "$type": "Document",
@@ -311,8 +307,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Controllers\\UserDashboardController.cs",
               "ViewState": "AgIAANoBAAAAAAAAAAAnwO0BAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T13:33:49.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T13:33:49.996Z"
             },
             {
               "$type": "Document",
@@ -324,8 +319,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Models\\Course.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T12:32:39.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-07T12:32:39.667Z"
             },
             {
               "$type": "Document",
@@ -337,8 +331,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T21:56:49.696Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T21:56:49.696Z"
             },
             {
               "$type": "Document",
@@ -350,8 +343,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Models\\QuestionOption.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAgwBcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T12:48:11.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-07T12:48:11.451Z"
             },
             {
               "$type": "Document",
@@ -363,8 +355,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Models\\Certificate.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAYwDwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T19:34:50.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T19:34:50.626Z"
             },
             {
               "$type": "Document",
@@ -376,8 +367,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Models\\Comment.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAApwBEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T22:09:48.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T22:09:48.121Z"
             },
             {
               "$type": "Document",
@@ -389,8 +379,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Controllers\\CourseController.cs",
               "ViewState": "AgIAAOIFAAAAAAAAAAAmwPcFAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T12:32:19.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-07T12:32:19.62Z"
             },
             {
               "$type": "Document",
@@ -402,8 +391,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\DTO\\UserRegistration.cs",
               "ViewState": "AgIAAHAAAAAAAAAAAAAgwH8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T23:37:22.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T23:37:22.649Z"
             },
             {
               "$type": "Document",
@@ -415,8 +403,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Controllers\\CommunityController.cs",
               "ViewState": "AgIAAMgBAAAAAAAAAAApwNgBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T22:02:17.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T22:02:17.575Z"
             },
             {
               "$type": "Document",
@@ -428,8 +415,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Models\\Post.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAawEIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T22:09:06.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T22:09:06.763Z"
             },
             {
               "$type": "Document",
@@ -441,8 +427,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Migrations\\20250917125748_new.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T12:57:49.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T12:57:49.009Z"
             },
             {
               "$type": "Document",
@@ -454,8 +439,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Models\\UserProvince.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T22:10:39.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T22:10:39.835Z"
             },
             {
               "$type": "Document",
@@ -467,8 +451,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Migrations\\20250917110650_New post like.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAAAAsAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T11:06:50.581Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T11:06:50.581Z"
             },
             {
               "$type": "Document",
@@ -480,8 +463,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\DTO\\PostDto.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAYwFgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T22:11:34.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T22:11:34.308Z"
             },
             {
               "$type": "Document",
@@ -493,8 +475,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Data\\AppDbContext.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAYwEQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T21:32:51.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T21:32:51.445Z"
             },
             {
               "$type": "Document",
@@ -506,8 +487,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Migrations\\20250916215213_initial pulse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T21:52:14.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T21:52:14.053Z"
             },
             {
               "$type": "Document",
@@ -519,8 +499,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Migrations\\20250916205001_new pulse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T20:50:01.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T20:50:01.872Z"
             },
             {
               "$type": "Document",
@@ -532,8 +511,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Models\\TestQuestion.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAA3wBgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T12:47:53.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-07T12:47:53.178Z"
             },
             {
               "$type": "Document",
@@ -545,8 +523,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Models\\UserRole.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T22:01:58.561Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T22:01:58.561Z"
             },
             {
               "$type": "Document",
@@ -558,8 +535,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAACKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-27T21:54:16.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T21:54:16.844Z"
             },
             {
               "$type": "Document",
@@ -571,8 +547,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Program.cs",
               "ViewState": "AgIAAIQAAAAAAAAAAAAmwJQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T21:46:15.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T21:46:15.312Z"
             },
             {
               "$type": "Document",
@@ -584,8 +559,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Migrations\\20250916203731_AddUserProfileFields.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T20:37:31.407Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T20:37:31.407Z"
             },
             {
               "$type": "Document",
@@ -597,8 +571,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Controllers\\ProfileController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T19:50:39.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T19:50:39.28Z"
             },
             {
               "$type": "Document",
@@ -610,8 +583,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Service\\JwtService.cs",
               "ViewState": "AgIAAGQAAAAAAAAAAADwv3oAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-07T13:13:38.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-07T13:13:38.295Z"
             },
             {
               "$type": "Document",
@@ -623,8 +595,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Migrations\\20250916202818_initial migration.cs",
               "ViewState": "AgIAAI4AAAAAAAAAAAAQwBEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T20:28:18.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T20:28:18.751Z"
             },
             {
               "$type": "Document",
@@ -636,8 +607,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Migrations\\20250916202629_new set.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T20:26:29.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T20:26:29.161Z"
             },
             {
               "$type": "Document",

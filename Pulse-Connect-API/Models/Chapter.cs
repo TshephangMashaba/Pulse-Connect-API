@@ -15,8 +15,8 @@ namespace Pulse_Connect_API.Models
         public string Content { get; set; }
         public int Order { get; set; }
 
-        public string MediaUrl { get; set; }
-        public string MediaType { get; set; }
+        public string? MediaUrl { get; set; }
+        public string? MediaType { get; set; }
 
         [Required]
         public string CourseId { get; set; }
