@@ -546,6 +546,154 @@ namespace Pulse_Connect_API.Controllers
                 return 0;
             }
         }
+        // Add these endpoints to UserDashboardController.cs
+        [HttpGet("notifications")]
+        public async Task<ActionResult<IEnumerable<NotificationDTO>>> GetNotifications()
+        {
+            try
+            {
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return Unauthorized("Invalid or missing user ID in token");
+                }
+
+                var notifications = await _context.Notifications
+                    .Where(n => n.UserId == userId)
+                    .OrderByDescending(n => n.CreatedAt)
+                    .Select(n => new NotificationDTO
+                    {
+                        Id = n.Id,
+                        Title = n.Title,
+                        Message = n.Message,
+                        Type = n.Type,
+                        IsRead = n.IsRead,
+                        CreatedAt = n.CreatedAt,
+                        RelatedEntityId = n.RelatedEntityId,
+                        RelatedEntityType = n.RelatedEntityType
+                    })
+                    .ToListAsync();
+
+                return Ok(notifications);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in GetNotifications: {ex.Message}");
+                return StatusCode(500, new
+                {
+                    Message = "Internal server error occurred while retrieving notifications",
+                    Details = ex.Message
+                });
+            }
+        }
+
+        [HttpPost("notifications/mark-as-read/{id}")]
+        public async Task<IActionResult> MarkNotificationAsRead(string id)
+        {
+            try
+            {
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return Unauthorized("Invalid or missing user ID in token");
+                }
+
+                var notification = await _context.Notifications
+                    .FirstOrDefaultAsync(n => n.Id == id && n.UserId == userId);
+
+                if (notification == null)
+                {
+                    return NotFound("Notification not found");
+                }
+
+                notification.IsRead = true;
+                notification.ReadAt = DateTime.UtcNow;
+                _context.Notifications.Update(notification);
+                await _context.SaveChangesAsync();
+
+                return Ok(new { Message = "Notification marked as read" });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in MarkNotificationAsRead: {ex.Message}");
+                return StatusCode(500, new
+                {
+                    Message = "Internal server error occurred",
+                    Details = ex.Message
+                });
+            }
+        }
+
+        [HttpPost("notifications/mark-all-read")]
+        public async Task<IActionResult> MarkAllNotificationsAsRead()
+        {
+            try
+            {
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return Unauthorized("Invalid or missing user ID in token");
+                }
+
+                var unreadNotifications = await _context.Notifications
+                    .Where(n => n.UserId == userId && !n.IsRead)
+                    .ToListAsync();
+
+                foreach (var notification in unreadNotifications)
+                {
+                    notification.IsRead = true;
+                    notification.ReadAt = DateTime.UtcNow;
+                }
+
+                if (unreadNotifications.Any())
+                {
+                    _context.Notifications.UpdateRange(unreadNotifications);
+                    await _context.SaveChangesAsync();
+                }
+
+                return Ok(new { Message = "All notifications marked as read" });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in MarkAllNotificationsAsRead: {ex.Message}");
+                return StatusCode(500, new
+                {
+                    Message = "Internal server error occurred",
+                    Details = ex.Message
+                });
+            }
+        }
+
+        [HttpGet("notifications/unread-count")]
+        public async Task<ActionResult<int>> GetUnreadNotificationCount()
+        {
+            try
+            {
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return Unauthorized("Invalid or missing user ID in token");
+                }
+
+                var count = await _context.Notifications
+                    .Where(n => n.UserId == userId && !n.IsRead)
+                    .CountAsync();
+
+                return Ok(count);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in GetUnreadNotificationCount: {ex.Message}");
+                return StatusCode(500, new
+                {
+                    Message = "Internal server error occurred",
+                    Details = ex.Message
+                });
+            }
+        }
+
+       
+
 
         private async Task<double> CalculateTotalLearningHours(string userId)
         {
@@ -590,7 +738,10 @@ namespace Pulse_Connect_API.Controllers
             return badges;
         }
     }
+
+
 }
+
 
   
 // DTO Classes
@@ -627,6 +778,18 @@ public class CourseProgressDTO
     public DateTime LastAccessed { get; set; }
     public string EstimatedRemainingTime { get; set; }
     public bool IsCompleted { get; set; } // Add this property
+}
+
+public class NotificationDTO
+{
+    public string Id { get; set; }
+    public string Title { get; set; }
+    public string Message { get; set; }
+    public string Type { get; set; }
+    public bool IsRead { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public string RelatedEntityId { get; set; }
+    public string RelatedEntityType { get; set; }
 }
 
 public class AchievementsDTO
