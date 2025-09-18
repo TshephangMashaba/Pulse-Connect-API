@@ -198,6 +198,76 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Pulse_Connect_API.Controllers.AnalyticsController",
+    "Method": "GetAnalyticsData",
+    "RelativePath": "api/Analytics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Pulse_Connect_API.Controllers.AnalyticsController",
+    "Method": "GetCourseCompletion",
+    "RelativePath": "api/Analytics/course-completion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Pulse_Connect_API.Controllers.AnalyticsController",
+    "Method": "GetGeographicDistribution",
+    "RelativePath": "api/Analytics/geographic-distribution",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Pulse_Connect_API.Controllers.AnalyticsController",
+    "Method": "GetHealthTopicEngagement",
+    "RelativePath": "api/Analytics/health-topic-engagement",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Pulse_Connect_API.Controllers.AnalyticsController",
+    "Method": "GetPopularCourses",
+    "RelativePath": "api/Analytics/popular-courses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Pulse_Connect_API.Controllers.AnalyticsController",
+    "Method": "GetRecentActivity",
+    "RelativePath": "api/Analytics/recent-activity",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Pulse_Connect_API.Controllers.AnalyticsController",
+    "Method": "GetUserEngagement",
+    "RelativePath": "api/Analytics/user-engagement",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Pulse_Connect_API.Controllers.CertificatesController",
     "Method": "ShareCertificate",
     "RelativePath": "api/Certificates/{certificateId}/share",
