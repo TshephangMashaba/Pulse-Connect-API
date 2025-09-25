@@ -739,71 +739,99 @@ namespace Pulse_Connect_API.Controllers
             return Ok(enrollment);
         }
 
-        // POST: api/course/unenroll/{courseId} (Protected)
         [HttpPost("unenroll/{courseId}")]
         public async Task<IActionResult> UnenrollFromCourse(string courseId)
         {
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (string.IsNullOrEmpty(userId))
+            try
             {
-                return Unauthorized("Invalid or missing user ID in token");
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return Unauthorized("Invalid or missing user ID in token");
+                }
+
+                // Find the enrollment with all related data
+                var enrollment = await _context.Enrollments
+                    .Include(e => e.ChapterProgress)
+                    .Include(e => e.TestAttempts)
+                        .ThenInclude(ta => ta.UserAnswers)
+                    .FirstOrDefaultAsync(e => e.UserId == userId && e.CourseId == courseId);
+
+                if (enrollment == null)
+                {
+                    return NotFound("Enrollment not found");
+                }
+
+                // Use transaction to ensure data consistency
+                using var transaction = await _context.Database.BeginTransactionAsync();
+                try
+                {
+                    // Step 1: Delete all certificates related to this enrollment's test attempts
+                    var testAttemptIds = enrollment.TestAttempts.Select(ta => ta.Id).ToList();
+                    if (testAttemptIds.Any())
+                    {
+                        var certificates = await _context.Certificates
+                            .Where(c => testAttemptIds.Contains(c.TestAttemptId))
+                            .ToListAsync();
+
+                        if (certificates.Any())
+                        {
+                            _context.Certificates.RemoveRange(certificates);
+                        }
+                    }
+
+                    // Step 2: Delete UserAnswers (must be deleted before TestAttempts)
+                    foreach (var testAttempt in enrollment.TestAttempts)
+                    {
+                        if (testAttempt.UserAnswers.Any())
+                        {
+                            _context.UserAnswers.RemoveRange(testAttempt.UserAnswers);
+                        }
+                    }
+
+                    // Step 3: Delete TestAttempts (must be deleted before Enrollment)
+                    if (enrollment.TestAttempts.Any())
+                    {
+                        _context.TestAttempts.RemoveRange(enrollment.TestAttempts);
+                    }
+
+                    // Step 4: Delete ChapterProgress (must be deleted before Enrollment)
+                    if (enrollment.ChapterProgress.Any())
+                    {
+                        _context.UserChapterProgresses.RemoveRange(enrollment.ChapterProgress);
+                    }
+
+                    // Step 5: Finally delete the Enrollment itself
+                    _context.Enrollments.Remove(enrollment);
+
+                    // Save all changes in one go
+                    await _context.SaveChangesAsync();
+
+                    // Commit the transaction
+                    await transaction.CommitAsync();
+
+                    return NoContent();
+                }
+                catch (Exception ex)
+                {
+                    await transaction.RollbackAsync();
+                    Console.WriteLine($"Transaction failed during unenrollment: {ex.Message}");
+                    if (ex.InnerException != null)
+                    {
+                        Console.WriteLine($"Inner exception: {ex.InnerException.Message}");
+                    }
+                    throw new Exception($"Database operation failed: {ex.Message}");
+                }
             }
-
-            var user = await _userManager.FindByIdAsync(userId);
-            var enrollment = await _context.Enrollments
-                .Include(e => e.Course)
-                .ThenInclude(c => c.Instructor)
-                .FirstOrDefaultAsync(e => e.UserId == userId && e.CourseId == courseId);
-
-            if (enrollment == null)
+            catch (Exception ex)
             {
-                return NotFound("Enrollment not found");
+                Console.WriteLine($"Error in unenrollment: {ex.Message}");
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine($"Inner exception: {ex.InnerException.Message}");
+                }
+                return StatusCode(500, $"Failed to unenroll from course: {ex.Message}");
             }
-
-            _context.Enrollments.Remove(enrollment);
-            await _context.SaveChangesAsync();
-
-            // Send unenrollment confirmation to student
-            var studentEmailBody = $@"
-                <h2>Course Unenrollment Confirmation</h2>
-                <p>Hello {user.FirstName},</p>
-                <p>You have been successfully unenrolled from the course <strong>{enrollment.Course.Title}</strong>.</p>
-                <p><strong>Unenrollment Details:</strong></p>
-                <ul>
-                    <li><strong>Course:</strong> {enrollment.Course.Title}</li>
-                    <li><strong>Instructor:</strong> {enrollment.Course.Instructor.FirstName} {enrollment.Course.Instructor.LastName}</li>
-                    <li><strong>Original Enrollment Date:</strong> {enrollment.EnrollmentDate.ToString("f")}</li>
-                    <li><strong>Unenrollment Date:</strong> {DateTime.UtcNow.ToString("f")}</li>
-                </ul>
-                <p>Your progress and data for this course have been removed.</p>
-                <p>If this was a mistake or you'd like to re-enroll, you can do so from the course page.</p>";
-
-            await _emailSender
-                .To(user.Email)
-                .Subject($"Unenrollment Confirmation: {enrollment.Course.Title}")
-                .Body(studentEmailBody, isHtml: true)
-                .SendAsync();
-
-            // Send unenrollment notification to instructor
-            var instructorEmailBody = $@"
-                <h2>Student Unenrollment Notification</h2>
-                <p>Hello {enrollment.Course.Instructor.FirstName},</p>
-                <p>A student has unenrolled from your course <strong>{enrollment.Course.Title}</strong>.</p>
-                <p><strong>Student Details:</strong></p>
-                <ul>
-                    <li><strong>Name:</strong> {user.FirstName} {user.LastName}</li>
-                    <li><strong>Email:</strong> {user.Email}</li>
-                    <li><strong>Enrollment Duration:</strong> {(DateTime.UtcNow - enrollment.EnrollmentDate).Days} days</li>
-                </ul>
-                <p>Current enrollments for this course: {enrollment.Course.Enrollments.Count - 1}</p>";
-
-            await _emailSender
-                .To(enrollment.Course.Instructor.Email)
-                .Subject($"Student Unenrollment: {user.FirstName} {user.LastName} - {enrollment.Course.Title}")
-                .Body(instructorEmailBody, isHtml: true)
-                .SendAsync();
-
-            return NoContent();
         }
 
         // POST: api/course/complete-chapter (Protected)

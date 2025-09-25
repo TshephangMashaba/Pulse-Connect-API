@@ -330,7 +330,6 @@ namespace Pulse_Connect_API.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ThumbnailUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")

@@ -24,7 +24,7 @@ namespace Pulse_Connect_API.Models
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedDate { get; set; } = DateTime.UtcNow;
 
-        public string ThumbnailUrl { get; set; }
+        public string? ThumbnailUrl { get; set; }
         public int EstimatedDuration { get; set; } // in minutes
 
         public ICollection<Chapter> Chapters { get; set; } = new List<Chapter>();

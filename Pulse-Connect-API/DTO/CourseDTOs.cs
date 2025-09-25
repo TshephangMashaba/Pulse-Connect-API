@@ -6,7 +6,7 @@ namespace Pulse_Connect_API.DTOs
     {
         public string Title { get; set; }
         public string Description { get; set; }
-        public string ThumbnailUrl { get; set; }
+        public string? ThumbnailUrl { get; set; }
         public int EstimatedDuration { get; set; }
     }
 
@@ -17,7 +17,7 @@ namespace Pulse_Connect_API.DTOs
         public string Description { get; set; }
         public string InstructorId { get; set; }
         public string InstructorName { get; set; }
-        public string ThumbnailUrl { get; set; }
+        public string? ThumbnailUrl { get; set; }
         public int EstimatedDuration { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }

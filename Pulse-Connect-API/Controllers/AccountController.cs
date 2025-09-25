@@ -633,6 +633,49 @@ namespace Pulse_Connect_API.Controllers
                 return StatusCode(500, new { error = ex.Message });
             }
         }
+
+        /// <summary>
+        /// Deletes a user (Admin only)
+        /// </summary>
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [HttpDelete("users/{id}")]
+        public async Task<IActionResult> DeleteUser(string id)
+        {
+            try
+            {
+                var user = await _userManager.FindByIdAsync(id);
+                if (user == null)
+                    return NotFound("User not found");
+
+                // Prevent deletion of your own account
+                var currentUserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (user.Id == currentUserId)
+                    return BadRequest("Cannot delete your own account");
+
+                var result = await _userManager.DeleteAsync(user);
+                if (!result.Succeeded)
+                    return BadRequest(result.Errors.Select(e => e.Description));
+
+                // Send notification email
+                var emailBody = $@"
+            <h2>Account Deleted</h2>
+            <p>Hello {user.FirstName},</p>
+            <p>Your Pulse Connect account has been deleted by an administrator.</p>
+            <p>If you believe this is an error, please contact our support team.</p>";
+
+                await _emailSender
+                    .To(user.Email)
+                    .Subject("Pulse Connect - Account Deleted")
+                    .Body(emailBody, isHtml: true)
+                    .SendAsync();
+
+                return Ok(new { Message = "User deleted successfully" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = ex.Message });
+            }
+        }
     }
 
 

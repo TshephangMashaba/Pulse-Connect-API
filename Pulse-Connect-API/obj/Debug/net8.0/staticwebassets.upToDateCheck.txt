@@ -1,15 +1,19 @@
 wwwroot\profile-pictures\01177f79-ee0e-4881-84f9-3ebf7a8c1f6a_Tshephang.png
+wwwroot\profile-pictures\2b9c67da-e972-4bea-a3c8-0d8550c8fc1a_eee000982b4f1aae930ffc43696f13ad17af9d81.jpg
 wwwroot\profile-pictures\a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png
 wwwroot\uploads\025ea461-0817-42d8-b617-ce05c8e308fc_signature (2).png
+wwwroot\uploads\0ae9cd0e-747d-4b6b-9678-78399333d29f_Photo 6.jpg
 wwwroot\uploads\21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.png
 wwwroot\uploads\22852a70-ad06-4f11-bb4d-81fce55b4b1f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg
 wwwroot\uploads\4af45a27-8ab5-4f09-abfb-2919d3eb0d5a_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg
 wwwroot\uploads\4cf54cca-b19b-4b17-9437-1ed7a3dc9187_ibali_logo_horizontal_v05.png
 wwwroot\uploads\6ddce06f-f6b6-4ba2-b876-b7cfa1fbd60c_ibali_logo_horizontal_v05.png
 wwwroot\uploads\8e7387ab-9670-4e47-9313-f8e174887bef_Certificate_PC-20250910-2EECA5A5.pdf
+wwwroot\uploads\ae2d9638-61ec-476a-a60d-4afaf074992e_Photo 6.jpg
 wwwroot\uploads\b84d814e-ebe2-4081-92a9-f83e60f8420e_Screenshot 2025-09-06 222345.png
 wwwroot\uploads\ceafca69-6e1a-4fbc-b144-b8fd68c28a25_ibali_logo_horizontal_v05.png
 wwwroot\uploads\e8a3ad22-aad9-421a-acf5-d4071d41bdbe_50649f6882e5c895d91e2903b2642e979c91a80c.jpg
+wwwroot\uploads\e93e763a-6f85-444b-b348-2cc6f5162229_Photo 6.jpg
 wwwroot\uploads\eebeb730-d62b-43b1-b578-451f81b79a58_ibali_logo_horizontal_v05.png
 wwwroot\uploads\fd2fac21-8dfb-44ab-a6b2-f64b18cc5b0c_Certificate_PC-20250910-2EECA5A5.pdf
 wwwroot\uploads\posts\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\21779e04-6b31-4c36-8d20-9ed189bb38f6.png
@@ -27,4 +31,5 @@ wwwroot\uploads\posts\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\bdcfacd7-7efe-466b-a7
 wwwroot\uploads\posts\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\c6fa3020-feeb-49a4-9acb-00c7fe27913f_0afc778e65f32bfe465a1e55a892bc752a674b6d.jpg
 wwwroot\uploads\posts\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\ddaea799-45a1-4a7d-a7b8-3f99d92fed26_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg
 wwwroot\uploads\posts\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\e40c1afe-cb36-4513-9e9d-bf13c18fac07_ibali_logo_horizontal_v05.png
+wwwroot\uploads\posts\9fe43885-e5bd-4c30-be1a-34a5c484173c\6e533936-e4e2-4702-8ab7-34056ba4f519_jpeg.jfif
 wwwroot\uploads\posts\bf9285bd-ac9a-4a2f-8fe6-b7beda178320\e72f543b-1b57-491b-866f-60e5a90ceeca_signature (1).png
