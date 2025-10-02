@@ -1,6 +1,10 @@
 wwwroot\profile-pictures\01177f79-ee0e-4881-84f9-3ebf7a8c1f6a_Tshephang.png
-wwwroot\profile-pictures\2b9c67da-e972-4bea-a3c8-0d8550c8fc1a_eee000982b4f1aae930ffc43696f13ad17af9d81.jpg
+wwwroot\profile-pictures\3466befa-8ca9-46ab-8804-5d16fc15971c_Kabelo.jpeg
+wwwroot\profile-pictures\902721e9-fce3-44b4-8c89-a4f50c6ec190_Tshephang.png
 wwwroot\profile-pictures\a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png
+wwwroot\profile-pictures\ab4a3ff9-a133-4080-a88e-a2f5ddb0fc12_naledi.jfif
+wwwroot\profile-pictures\de701cb4-f84f-4687-ac00-dd2d70731884_Vusi.jpeg
+wwwroot\profile-pictures\f8683622-26d3-4f29-b7af-1aa2309fb986_aston.jfif
 wwwroot\uploads\025ea461-0817-42d8-b617-ce05c8e308fc_signature (2).png
 wwwroot\uploads\0ae9cd0e-747d-4b6b-9678-78399333d29f_Photo 6.jpg
 wwwroot\uploads\21a9db6c-abfc-4154-aa6b-b32cded5e5fc_ibali_logo_horizontal_v05.png
@@ -32,4 +36,5 @@ wwwroot\uploads\posts\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\c6fa3020-feeb-49a4-9a
 wwwroot\uploads\posts\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\ddaea799-45a1-4a7d-a7b8-3f99d92fed26_58c8ab4ff96e6a423ed1fb1f61d75b2b47e1a2b9.jpg
 wwwroot\uploads\posts\95469ae9-2dc1-4569-8ec6-5b10a595c0fb\e40c1afe-cb36-4513-9e9d-bf13c18fac07_ibali_logo_horizontal_v05.png
 wwwroot\uploads\posts\9fe43885-e5bd-4c30-be1a-34a5c484173c\6e533936-e4e2-4702-8ab7-34056ba4f519_jpeg.jfif
+wwwroot\uploads\posts\9fe43885-e5bd-4c30-be1a-34a5c484173c\846e15f4-052c-4331-a161-72d77c8f01ef_Photo-3.jpg
 wwwroot\uploads\posts\bf9285bd-ac9a-4a2f-8fe6-b7beda178320\e72f543b-1b57-491b-866f-60e5a90ceeca_signature (1).png

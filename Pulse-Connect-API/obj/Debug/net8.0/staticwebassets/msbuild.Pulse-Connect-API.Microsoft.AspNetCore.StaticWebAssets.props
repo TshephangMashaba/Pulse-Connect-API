@@ -18,23 +18,41 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\01177f79-ee0e-4881-84f9-3ebf7a8c1f6a_Tshephang.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\2b9c67da-e972-4bea-a3c8-0d8550c8fc1a_eee000982b4f1aae930ffc43696f13ad17af9d81.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\3466befa-8ca9-46ab-8804-5d16fc15971c_Kabelo.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>Pulse-Connect-API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Pulse-Connect-API</BasePath>
-      <RelativePath>profile-pictures/2b9c67da-e972-4bea-a3c8-0d8550c8fc1a_eee000982b4f1aae930ffc43696f13ad17af9d81.jpg</RelativePath>
+      <RelativePath>profile-pictures/3466befa-8ca9-46ab-8804-5d16fc15971c_Kabelo.jpeg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>rs6p7mua5h</Fingerprint>
-      <Integrity>VTIl/1JL3IifunMcPMP+O+8yq/v9VbQeFl1VOhxv59w=</Integrity>
+      <Fingerprint>m455nhbo92</Fingerprint>
+      <Integrity>NrTiT4ihKbgyo1/diMAGqozY7Hys8Ln8PGuoJBoXVGk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\2b9c67da-e972-4bea-a3c8-0d8550c8fc1a_eee000982b4f1aae930ffc43696f13ad17af9d81.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\3466befa-8ca9-46ab-8804-5d16fc15971c_Kabelo.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\902721e9-fce3-44b4-8c89-a4f50c6ec190_Tshephang.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pulse-Connect-API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pulse-Connect-API</BasePath>
+      <RelativePath>profile-pictures/902721e9-fce3-44b4-8c89-a4f50c6ec190_Tshephang.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7g7snnbc42</Fingerprint>
+      <Integrity>SQgdhjC54Ifu/7mrgXuTJHyrlY13QVKNfNe1bSXzCHc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\902721e9-fce3-44b4-8c89-a4f50c6ec190_Tshephang.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png'))">
       <SourceType>Package</SourceType>
@@ -53,6 +71,60 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\a6bcf04f-128d-4eb1-957a-0a20cecdecc5_Pictures-3.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\ab4a3ff9-a133-4080-a88e-a2f5ddb0fc12_naledi.jfif'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pulse-Connect-API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pulse-Connect-API</BasePath>
+      <RelativePath>profile-pictures/ab4a3ff9-a133-4080-a88e-a2f5ddb0fc12_naledi.jfif</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>rd8o5ytd1i</Fingerprint>
+      <Integrity>bz2i2b9V5sUVTqQrX4KYfjgiaQ3KCne/vTtZEx7wzFM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\ab4a3ff9-a133-4080-a88e-a2f5ddb0fc12_naledi.jfif'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\de701cb4-f84f-4687-ac00-dd2d70731884_Vusi.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pulse-Connect-API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pulse-Connect-API</BasePath>
+      <RelativePath>profile-pictures/de701cb4-f84f-4687-ac00-dd2d70731884_Vusi.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>oj1ld9t8y5</Fingerprint>
+      <Integrity>FLx4qWU92hUyP8h0Evhpx1/CQwtACtEpm7QbF2N0dBA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\de701cb4-f84f-4687-ac00-dd2d70731884_Vusi.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\f8683622-26d3-4f29-b7af-1aa2309fb986_aston.jfif'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pulse-Connect-API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pulse-Connect-API</BasePath>
+      <RelativePath>profile-pictures/f8683622-26d3-4f29-b7af-1aa2309fb986_aston.jfif</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>t38wksv2ex</Fingerprint>
+      <Integrity>9xp9l6SYzTLrQBK71FXMmFQYNR8dStxYp6ZdRcphXOY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\f8683622-26d3-4f29-b7af-1aa2309fb986_aston.jfif'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\025ea461-0817-42d8-b617-ce05c8e308fc_signature (2).png'))">
       <SourceType>Package</SourceType>
@@ -611,6 +683,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\9fe43885-e5bd-4c30-be1a-34a5c484173c\6e533936-e4e2-4702-8ab7-34056ba4f519_jpeg.jfif'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\9fe43885-e5bd-4c30-be1a-34a5c484173c\846e15f4-052c-4331-a161-72d77c8f01ef_Photo-3.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pulse-Connect-API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pulse-Connect-API</BasePath>
+      <RelativePath>uploads/posts/9fe43885-e5bd-4c30-be1a-34a5c484173c/846e15f4-052c-4331-a161-72d77c8f01ef_Photo-3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>zv2isrx183</Fingerprint>
+      <Integrity>4ehS7ZxMbZ7yHhTL2PCT4e8lDl1jp31Tzlxc22jCRTA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\9fe43885-e5bd-4c30-be1a-34a5c484173c\846e15f4-052c-4331-a161-72d77c8f01ef_Photo-3.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\bf9285bd-ac9a-4a2f-8fe6-b7beda178320\e72f543b-1b57-491b-866f-60e5a90ceeca_signature (1).png'))">
       <SourceType>Package</SourceType>
