@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20251102171928_new contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pulse-Connect-API\\Migrations\\20251102171928_new contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20251102190317_new structure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pulse-Connect-API\\Migrations\\20251102190317_new structure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\dto\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\dto\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\migrations\\20251102171928_new contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\migrations\\20251102171928_new contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,16 +39,8 @@
       "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\dto\\contactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -101,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\dto\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|solutionrelative:pulse-connect-api\\dto\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24467468-89FF-401C-8F06-CB0AA48A1145}|Pulse-Connect-API\\Pulse-Connect-API.csproj|c:\\users\\qxz5swg\\desktop\\pulse connect api\\pulse-connect-api\\pulse-connect-api\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -270,7 +274,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Comment.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\Comment.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\Comment.cs",
@@ -284,43 +288,109 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20251102190317_new structure.cs",
+              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20251102190317_new structure.cs",
+              "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20251102190317_new structure.cs",
+              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20251102190317_new structure.cs",
+              "RelativeToolTip": "Pulse-Connect-API\\Migrations\\20251102190317_new structure.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T19:03:18.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "20251102171928_new contact.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20251102171928_new contact.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20251102171928_new contact.cs",
               "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20251102171928_new contact.cs",
               "RelativeToolTip": "Pulse-Connect-API\\Migrations\\20251102171928_new contact.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-02T17:19:28.385Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Pulse-Connect-API\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Pulse-Connect-API\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAOsAAAAAAAAAAADwv/UAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T21:32:51.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\appsettings.json",
+              "RelativeDocumentMoniker": "Pulse-Connect-API\\appsettings.json",
+              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\appsettings.json",
+              "RelativeToolTip": "Pulse-Connect-API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-02T12:27:52.526Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "Pulse-Connect-API\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "Pulse-Connect-API\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAAwLoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T19:50:39.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Pulse-Connect-API\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Pulse-Connect-API\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAKsBAAAAAAAAAAAIwMEBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T23:48:13.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\User.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\User.cs",
               "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\User.cs",
               "RelativeToolTip": "Pulse-Connect-API\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T16:35:58.266Z"
+              "WhenOpened": "2025-11-02T16:35:58.266Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ContactController.cs",
-              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\ContactController.cs",
-              "RelativeDocumentMoniker": "Pulse-Connect-API\\Controllers\\ContactController.cs",
-              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\ContactController.cs",
-              "RelativeToolTip": "Pulse-Connect-API\\Controllers\\ContactController.cs",
-              "ViewState": "AgIAAFoBAAAAAAAAAAAIwH8BAAABAAAAAAAAAA==",
+              "Title": "UserRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\DTO\\UserRegistration.cs",
+              "RelativeDocumentMoniker": "Pulse-Connect-API\\DTO\\UserRegistration.cs",
+              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\DTO\\UserRegistration.cs",
+              "RelativeToolTip": "Pulse-Connect-API\\DTO\\UserRegistration.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAA0wH8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T16:34:29.114Z"
+              "WhenOpened": "2025-07-31T23:37:22.649Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "CourseController.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Controllers\\CourseController.cs",
@@ -333,55 +403,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Pulse-Connect-API\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Pulse-Connect-API\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAOgAAAAAAAAAAAA3wPUAAAAAAAAAAAAAAA==",
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "Pulse-Connect-API\\Controllers\\ContactController.cs",
+              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "Pulse-Connect-API\\Controllers\\ContactController.cs",
+              "ViewState": "AgIAAFoBAAAAAAAAAAAIwH8BAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T21:32:51.445Z"
+              "WhenOpened": "2025-11-02T16:34:29.114Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\appsettings.json",
-              "RelativeDocumentMoniker": "Pulse-Connect-API\\appsettings.json",
-              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\appsettings.json",
-              "RelativeToolTip": "Pulse-Connect-API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-02T12:27:52.526Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProfileController.cs",
-              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\ProfileController.cs",
-              "RelativeDocumentMoniker": "Pulse-Connect-API\\Controllers\\ProfileController.cs",
-              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\ProfileController.cs",
-              "RelativeToolTip": "Pulse-Connect-API\\Controllers\\ProfileController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T19:50:39.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Pulse-Connect-API\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Pulse-Connect-API\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAPwAAAAAAAAAAAAwwCABAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T23:48:13.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ContactDto.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\DTO\\ContactDto.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\DTO\\ContactDto.cs",
@@ -393,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Dockerfile.txt",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Dockerfile.txt",
               "RelativeDocumentMoniker": "Dockerfile.txt",
@@ -405,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "JwtService.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Service\\JwtService.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Service\\JwtService.cs",
@@ -417,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Program.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Program.cs",
@@ -429,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Post.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\Post.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\Post.cs",
@@ -441,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "20251102142335_new ety.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20251102142335_new ety.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20251102142335_new ety.cs",
@@ -453,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "CertificatesController.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\CertificatesController.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Controllers\\CertificatesController.cs",
@@ -465,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Certificate.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\Certificate.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\Certificate.cs",
@@ -477,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "20251102130150_New.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20251102130150_New.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20251102130150_New.cs",
@@ -489,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "20251102132314_new .cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20251102132314_new .cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20251102132314_new .cs",
@@ -501,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "UserDashboardController.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\UserDashboardController.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Controllers\\UserDashboardController.cs",
@@ -513,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "CommunityController.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\CommunityController.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Controllers\\CommunityController.cs",
@@ -525,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Course.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\Course.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\Course.cs",
@@ -537,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "CourseDTOs.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\DTO\\CourseDTOs.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\DTO\\CourseDTOs.cs",
@@ -549,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "20250918171110_xxxc.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250918171110_xxxc.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250918171110_xxxc.cs",
@@ -560,7 +593,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "AnalyticsController.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Controllers\\AnalyticsController.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Controllers\\AnalyticsController.cs",
@@ -572,7 +605,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\Notification.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\Notification.cs",
@@ -584,7 +617,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "UserRole.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\UserRole.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\UserRole.cs",
@@ -596,19 +629,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "UserRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\DTO\\UserRegistration.cs",
-              "RelativeDocumentMoniker": "Pulse-Connect-API\\DTO\\UserRegistration.cs",
-              "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\DTO\\UserRegistration.cs",
-              "RelativeToolTip": "Pulse-Connect-API\\DTO\\UserRegistration.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAA1wH8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T23:37:22.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "UserProvince.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\UserProvince.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\UserProvince.cs",
@@ -620,7 +641,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "UserAnswer.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\UserAnswer.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\UserAnswer.cs",
@@ -632,7 +653,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "UserChapterProgress.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\UserChapterProgress.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\UserChapterProgress.cs",
@@ -644,7 +665,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "TestQuestion.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\TestQuestion.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\TestQuestion.cs",
@@ -656,7 +677,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "TestAttempt.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\TestAttempt.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\TestAttempt.cs",
@@ -668,7 +689,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "QuestionOption.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\QuestionOption.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\QuestionOption.cs",
@@ -680,7 +701,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "PostImage.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\PostImage.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\PostImage.cs",
@@ -692,7 +713,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "Enrollment.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\Enrollment.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\Enrollment.cs",
@@ -704,7 +725,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "CourseTest.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\CourseTest.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\CourseTest.cs",
@@ -716,7 +737,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "Chapter.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Models\\Chapter.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Models\\Chapter.cs",
@@ -728,7 +749,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "CertificateDTO.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\DTO\\CertificateDTO.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\DTO\\CertificateDTO.cs",
@@ -740,7 +761,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "20250917125748_new.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250917125748_new.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250917125748_new.cs",
@@ -751,7 +772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "20250917110650_New post like.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250917110650_New post like.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250917110650_New post like.cs",
@@ -762,7 +783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "20250916215213_initial pulse.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250916215213_initial pulse.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250916215213_initial pulse.cs",
@@ -773,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "20250916205001_new pulse.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250916205001_new pulse.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250916205001_new pulse.cs",
@@ -784,7 +805,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "20250916203731_AddUserProfileFields.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250916203731_AddUserProfileFields.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250916203731_AddUserProfileFields.cs",
@@ -795,7 +816,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "20250916202818_initial migration.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250916202818_initial migration.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250916202818_initial migration.cs",
@@ -806,7 +827,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "20250916202629_new set.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250916202629_new set.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250916202629_new set.cs",
@@ -817,7 +838,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "RoleConfigurations.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\SeedConfigurations\\RoleConfigurations.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\SeedConfigurations\\RoleConfigurations.cs",
@@ -829,7 +850,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "20250911000742_new community.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250911000742_new community.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250911000742_new community.cs",
@@ -840,7 +861,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "ProvinceSeeder.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Data\\ProvinceSeeder.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Data\\ProvinceSeeder.cs",
@@ -852,7 +873,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "20250910222722_Initial Migrate.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250910222722_Initial Migrate.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250910222722_Initial Migrate.cs",
@@ -863,7 +884,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "20250910221409_Initial-Migration.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250910221409_Initial-Migration.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250910221409_Initial-Migration.cs",
@@ -874,7 +895,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "20250910221538_Initial.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250910221538_Initial.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250910221538_Initial.cs",
@@ -885,7 +906,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "20250910222054_Initial migrate.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250910222054_Initial migrate.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250910222054_Initial migrate.cs",
@@ -896,7 +917,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "20250909194124_Initial Migration.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250909194124_Initial Migration.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250909194124_Initial Migration.cs",
@@ -907,7 +928,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "20250909193952_Initial Migration.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250909193952_Initial Migration.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250909193952_Initial Migration.cs",
@@ -918,7 +939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "Pulse-Connect-API.csproj",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Pulse-Connect-API.csproj",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Pulse-Connect-API.csproj",
@@ -930,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "UserRoleConfigurations.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\SeedConfigurations\\UserRoleConfigurations.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\SeedConfigurations\\UserRoleConfigurations.cs",
@@ -942,7 +963,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "20250907140811_nw.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250907140811_nw.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250907140811_nw.cs",
@@ -953,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "20250907141120_eih.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250907141120_eih.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250907141120_eih.cs",
@@ -964,7 +985,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "20250907140604_new Migration.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250907140604_new Migration.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250907140604_new Migration.cs",
@@ -975,7 +996,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\MappingProfile.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\MappingProfile.cs",
@@ -987,7 +1008,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "20250907140106_New Migration.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250907140106_New Migration.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250907140106_New Migration.cs",
@@ -998,7 +1019,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "20250907140027_Initial Migration.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250907140027_Initial Migration.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250907140027_Initial Migration.cs",
@@ -1009,7 +1030,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "20250907133249_New Migrate.cs",
               "DocumentMoniker": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Pulse-Connect-API\\Migrations\\20250907133249_New Migrate.cs",
               "RelativeDocumentMoniker": "Pulse-Connect-API\\Migrations\\20250907133249_New Migrate.cs",

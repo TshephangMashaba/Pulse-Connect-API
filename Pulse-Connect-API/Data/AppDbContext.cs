@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pulse_Connect_API.Data;
 using Pulse_Connect_API.Models;
 
@@ -12,6 +13,24 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
+        // Configure all DateTime properties to be stored as UTC - PUT THIS AT THE TOP
+        foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+        {
+            foreach (var property in entityType.GetProperties())
+            {
+                if (property.ClrType == typeof(DateTime) || property.ClrType == typeof(DateTime?))
+                {
+                    property.SetValueConverter(
+                        new ValueConverter<DateTime, DateTime>(
+                            v => v.Kind == DateTimeKind.Unspecified ?
+                                DateTime.SpecifyKind(v, DateTimeKind.Utc) : v.ToUniversalTime(),
+                            v => DateTime.SpecifyKind(v, DateTimeKind.Utc)
+                        )
+                    );
+                }
+            }
+        }
 
         // Apply Role configurations
         modelBuilder.Entity<Role>(entity =>
@@ -87,8 +106,6 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
 
             entity.HasIndex(up => new { up.UserId, up.Province }).IsUnique();
         });
-
-     
 
         // EXISTING COURSE CONFIGURATIONS (keep as is)
         modelBuilder.Entity<Course>()

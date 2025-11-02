@@ -286,7 +286,6 @@ namespace Pulse_Connect_API.Controllers
                 Roles = roles
             });
         }
-
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [HttpPut("profile")]
         public async Task<IActionResult> UpdateProfile([FromForm] UpdateProfileDTO request)
@@ -301,7 +300,7 @@ namespace Pulse_Connect_API.Controllers
                 Console.WriteLine($"Address: {request.Address}");
                 Console.WriteLine($"Race: {request.Race}");
                 Console.WriteLine($"Gender: {request.Gender}");
-                Console.WriteLine($"ProfilePicture: {request.ProfilePicture?.FileName}");
+                Console.WriteLine($"ProfilePicture: {request.ProfilePicture?.FileName ?? "No file"}");
 
                 // Manual validation
                 if (string.IsNullOrWhiteSpace(request.FirstName))
