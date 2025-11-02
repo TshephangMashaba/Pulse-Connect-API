@@ -259,7 +259,8 @@
               "ViewState": "AgIAAA0AAAAAAAAAAAAwwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-10T22:09:48.121Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -269,9 +270,9 @@
               "RelativeDocumentMoniker": "Dockerfile.txt",
               "ToolTip": "C:\\Users\\QXZ5SWG\\Desktop\\Pulse Connect API\\Pulse-Connect-API\\Dockerfile.txt",
               "RelativeToolTip": "Dockerfile.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-11-02T14:41:49.281Z",
+              "WhenOpened": "2025-11-02T14:49:41.994Z",
               "EditorCaption": ""
             },
             {
@@ -284,8 +285,7 @@
               "RelativeToolTip": "Pulse-Connect-API\\Migrations\\20251102142335_new ety.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T14:23:36.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T14:23:36.166Z"
             },
             {
               "$type": "Document",
