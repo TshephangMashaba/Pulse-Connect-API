@@ -204,3 +204,5 @@ C:\Users\QXZ5SWG\Desktop\Pulse Connect API\Pulse-Connect-API\Pulse-Connect-API\o
 C:\Users\QXZ5SWG\Desktop\Pulse Connect API\Pulse-Connect-API\Pulse-Connect-API\obj\Debug\net8.0\Pulse-Connect-API.pdb
 C:\Users\QXZ5SWG\Desktop\Pulse Connect API\Pulse-Connect-API\Pulse-Connect-API\obj\Debug\net8.0\Pulse-Connect-API.genruntimeconfig.cache
 C:\Users\QXZ5SWG\Desktop\Pulse Connect API\Pulse-Connect-API\Pulse-Connect-API\obj\Debug\net8.0\ref\Pulse-Connect-API.dll
+C:\Users\QXZ5SWG\Desktop\Pulse Connect API\Pulse-Connect-API\Pulse-Connect-API\bin\Debug\net8.0\Npgsql.dll
+C:\Users\QXZ5SWG\Desktop\Pulse Connect API\Pulse-Connect-API\Pulse-Connect-API\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

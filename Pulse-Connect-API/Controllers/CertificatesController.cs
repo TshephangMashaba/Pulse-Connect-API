@@ -13,8 +13,6 @@ using System.Security.Claims;
 using System.Text;
 using QuestPDF.Fluent;
 
-
-
 namespace Pulse_Connect_API.Controllers
 {
     [Route("api/[controller]")]
@@ -34,8 +32,6 @@ namespace Pulse_Connect_API.Controllers
             IFluentEmail emailSender,
             IWebHostEnvironment environment,
             ILogger<CertificatesController> logger)
-
-
         {
             _context = context;
             _userManager = userManager;
@@ -44,7 +40,6 @@ namespace Pulse_Connect_API.Controllers
             _logger = logger;
         }
 
-        // GET: api/certificates/my-certificates
         // GET: api/certificates/my-certificates
         [HttpGet("my-certificates")]
         public async Task<ActionResult<IEnumerable<CertificateDTO>>> GetMyCertificates()
@@ -210,7 +205,6 @@ namespace Pulse_Connect_API.Controllers
         }
 
         // GET: api/certificates/{id}/download
-
         [HttpGet("{id}/download")]
         public async Task<IActionResult> DownloadCertificate(string id)
         {
@@ -281,7 +275,7 @@ namespace Pulse_Connect_API.Controllers
                     <style>
                         body {{ font-family: Arial, sans-serif; line-height: 1.6; }}
                         .certificate-info {{ background: #f8f9fa; padding: 20px; border-radius: 10px; }}
-                        .button {{ display: inline-block; padding: 12px 24px; background: #10b981; color: white; text-decoration: none; border-radius: 5px; }}
+                        .instruction {{ background: #e3f2fd; padding: 15px; border-radius: 5px; margin: 15px 0; }}
                     </style>
                 </head>
                 <body>
@@ -297,10 +291,12 @@ namespace Pulse_Connect_API.Controllers
                         <p><strong>Issue Date:</strong> {certificate.IssueDate:MMMM dd, yyyy}</p>
                     </div>
 
-                    <p>You can download your certificate by clicking the button below:</p>
-                    <a href='{certificate.DownloadUrl}' class='button'>Download Certificate</a>
+                    <div class='instruction'>
+                        <h4>How to Access Your Certificate:</h4>
+                        <p>To download or share your certificate, simply log in to your Pulse Connect account and navigate to the <strong>Certificates</strong> section in your dashboard.</p>
+                    </div>
 
-                    <p>Keep up the great work! Your certificate is also available in your Pulse Connect dashboard.</p>
+                    <p>Keep up the great work! We're proud of your accomplishment.</p>
 
                     <p>Best regards,<br>The Pulse Connect Team</p>
                 </body>
@@ -318,8 +314,6 @@ namespace Pulse_Connect_API.Controllers
             _context.Certificates.Update(certificate);
             await _context.SaveChangesAsync();
         }
-
-
 
         // GET: api/certificates/verify/{certificateNumber}
         [HttpGet("verify/{certificateNumber}")]
@@ -412,7 +406,6 @@ namespace Pulse_Connect_API.Controllers
             });
         }
 
-
         [HttpPost("{certificateId}/share")]
         public async Task<IActionResult> ShareCertificate(string certificateId, [FromBody] ShareRequestDto shareRequest)
         {
@@ -503,98 +496,101 @@ namespace Pulse_Connect_API.Controllers
                     .Where(x => x.Duration <= 1)
                     .CountAsync();
 
-                // Create badges list - NOW USING completedCourseCount INSTEAD OF certificates.Count
+                // Create badges list
                 var badges = new List<BadgeDto>
-        {
-            new BadgeDto
-            {
-                Id = "1",
-                Name = "Health Champion",
-                Description = "Complete 3 courses",
-                Icon = "🏆",
-                Earned = completedCourseCount >= 3,
-                Progress = Math.Min(completedCourseCount, 3),
-                Target = 3,
-                Category = "completion"
-            },
-            new BadgeDto
-            {
-                Id = "2",
-                Name = "Quick Learner",
-                Description = "Finish a course in 1 day",
-                Icon = "⚡",
-                Earned = quickLearnerCourses > 0,
-                Progress = quickLearnerCourses,
-                Target = 1,
-                Category = "speed"
-            },
-            new BadgeDto
-            {
-                Id = "3",
-                Name = "Community Helper",
-                Description = "5 forum posts",
-                Icon = "💬",
-                Earned = forumPosts >= 5,
-                Progress = Math.Min(forumPosts, 5),
-                Target = 5,
-                Category = "community"
-            },
-            new BadgeDto
-            {
-                Id = "4",
-                Name = "Quiz Master",
-                Description = "Score 100% on a quiz",
-                Icon = "🎯",
-                Earned = testAttempts.Any(ta => ta.Score == 100),
-                Progress = testAttempts.Any(ta => ta.Score == 100) ? 1 : 0,
-                Target = 1,
-                Category = "performance"
-            },
-            new BadgeDto
-            {
-                Id = "5",
-                Name = "Knowledge Seeker",
-                Description = "Complete 5 courses",
-                Icon = "📚",
-                Earned = completedCourseCount >= 5,
-                Progress = Math.Min(completedCourseCount, 5),
-                Target = 5,
-                Category = "completion"
-            },
-            new BadgeDto
-            {
-                Id = "6",
-                Name = "Health Advocate",
-                Description = "Share 3 certificates",
-                Icon = "📤",
-                Earned = sharedCertificates >= 3,
-                Progress = Math.Min(sharedCertificates, 3),
-                Target = 3,
-                Category = "sharing"
-            },
-            new BadgeDto
-            {
-                Id = "7",
-                Name = "Certified Pro",
-                Description = "Earn 10 certificates",
-                Icon = "⭐",
-                Earned = completedCourseCount >= 10, // Changed to course count
-                Progress = Math.Min(completedCourseCount, 10),
-                Target = 10,
-                Category = "mastery"
-            },
-            new BadgeDto
-            {
-                Id = "8",
-                Name = "Perfect Score",
-                Description = "Get 100% on 3 different courses",
-                Icon = "💯",
-                Earned = perfectScoreCourses >= 3, // Now counts unique courses with perfect score
-                Progress = Math.Min(perfectScoreCourses, 3),
-                Target = 3,
-                Category = "excellence"
-            }
-        };
+                {
+                    new BadgeDto
+                    {
+                        Id = "1",
+                        Name = "Health Champion",
+                        Description = "Complete 3 courses",
+                        Icon = "🏆",
+                        Earned = completedCourseCount >= 3,
+                        Progress = Math.Min(completedCourseCount, 3),
+                        Target = 3,
+                        Category = "completion"
+                    },
+                    new BadgeDto
+                    {
+                        Id = "2",
+                        Name = "Quick Learner",
+                        Description = "Finish a course in 1 day",
+                        Icon = "⚡",
+                        Earned = quickLearnerCourses > 0,
+                        Progress = quickLearnerCourses,
+                        Target = 1,
+                        Category = "speed"
+                    },
+                    new BadgeDto
+                    {
+                        Id = "3",
+                        Name = "Community Helper",
+                        Description = "5 forum posts",
+                        Icon = "💬",
+                        Earned = forumPosts >= 5,
+                        Progress = Math.Min(forumPosts, 5),
+                        Target = 5,
+                        Category = "community"
+                    },
+                    new BadgeDto
+                    {
+                        Id = "4",
+                        Name = "Quiz Master",
+                        Description = "Score 100% on a quiz",
+                        Icon = "🎯",
+                        Earned = testAttempts.Any(ta => ta.Score == 100),
+                        Progress = testAttempts.Any(ta => ta.Score == 100) ? 1 : 0,
+                        Target = 1,
+                        Category = "performance"
+                    },
+                    new BadgeDto
+                    {
+                        Id = "5",
+                        Name = "Knowledge Seeker",
+                        Description = "Complete 5 courses",
+                        Icon = "📚",
+                        Earned = completedCourseCount >= 5,
+                        Progress = Math.Min(completedCourseCount, 5),
+                        Target = 5,
+                        Category = "completion"
+                    },
+                    new BadgeDto
+                    {
+                        Id = "6",
+                        Name = "Health Advocate",
+                        Description = "Share 3 certificates",
+                        Icon = "📤",
+                        Earned = sharedCertificates >= 3,
+                        Progress = Math.Min(sharedCertificates, 3),
+                        Target = 3,
+                        Category = "sharing"
+                    },
+                    new BadgeDto
+                    {
+                        Id = "7",
+                        Name = "Certified Pro",
+                        Description = "Earn 10 certificates",
+                        Icon = "⭐",
+                        Earned = completedCourseCount >= 10,
+                        Progress = Math.Min(completedCourseCount, 10),
+                        Target = 10,
+                        Category = "mastery"
+                    },
+                    new BadgeDto
+                    {
+                        Id = "8",
+                        Name = "Perfect Score",
+                        Description = "Get 100% on 3 different courses",
+                        Icon = "💯",
+                        Earned = perfectScoreCourses >= 3,
+                        Progress = Math.Min(perfectScoreCourses, 3),
+                        Target = 3,
+                        Category = "excellence"
+                    }
+                };
+
+                // Check for newly earned badges and send emails
+                await CheckAndSendBadgeEmails(userId, badges);
 
                 // Create response
                 var response = new AchievementResponseDto
@@ -616,5 +612,89 @@ namespace Pulse_Connect_API.Controllers
             }
         }
 
+        private async Task CheckAndSendBadgeEmails(string userId, List<BadgeDto> currentBadges)
+        {
+            try
+            {
+                var user = await _userManager.FindByIdAsync(userId);
+                if (user == null) return;
+
+                // Get previously earned badges from database
+                var previousBadgeEarnings = await _context.BadgeEarnings
+                    .Where(be => be.UserId == userId)
+                    .ToListAsync();
+
+                // Check for newly earned badges
+                foreach (var badge in currentBadges.Where(b => b.Earned))
+                {
+                    var wasPreviouslyEarned = previousBadgeEarnings.Any(be => be.BadgeId == badge.Id);
+
+                    if (!wasPreviouslyEarned)
+                    {
+                        // This is a newly earned badge - send email and record it
+                        await SendBadgeEmail(user, badge);
+
+                        // Record the badge earning
+                        var badgeEarning = new BadgeEarning
+                        {
+                            UserId = userId,
+                            BadgeId = badge.Id,
+                            EarnedDate = DateTime.UtcNow
+                        };
+                        _context.BadgeEarnings.Add(badgeEarning);
+                    }
+                }
+
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error checking and sending badge emails");
+                // Don't throw - this shouldn't break the achievements endpoint
+            }
+        }
+
+        private async Task SendBadgeEmail(User user, BadgeDto badge)
+        {
+            var emailBody = $@"
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <style>
+                        body {{ font-family: Arial, sans-serif; line-height: 1.6; }}
+                        .badge-info {{ background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: center; }}
+                        .badge-icon {{ font-size: 48px; margin-bottom: 15px; }}
+                        .instruction {{ background: #e3f2fd; padding: 15px; border-radius: 5px; margin: 15px 0; }}
+                    </style>
+                </head>
+                <body>
+                    <h2>🎉 You've Earned a New Badge!</h2>
+                    <p>Dear {user.FirstName},</p>
+                    <p>Congratulations! You've just earned a new achievement badge for your outstanding performance on Pulse Connect!</p>
+                    
+                    <div class='badge-info'>
+                        <div class='badge-icon'>{badge.Icon}</div>
+                        <h3>{badge.Name}</h3>
+                        <p><strong>{badge.Description}</strong></p>
+                        <p>This badge recognizes your dedication and achievement in learning.</p>
+                    </div>
+
+                    <div class='instruction'>
+                        <h4>View Your Badges:</h4>
+                        <p>You can see all your earned badges in the <strong>Achievements</strong> section of your Pulse Connect dashboard.</p>
+                    </div>
+
+                    <p>Keep up the fantastic work! Your progress is inspiring.</p>
+
+                    <p>Best regards,<br>The Pulse Connect Team</p>
+                </body>
+                </html>";
+
+            await _emailSender
+                .To(user.Email)
+                .Subject($"🏆 New Badge Earned: {badge.Name} - Pulse Connect")
+                .Body(emailBody, isHtml: true)
+                .SendAsync();
+        }
     }
 }

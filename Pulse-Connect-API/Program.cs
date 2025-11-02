@@ -67,7 +67,8 @@ builder.Services.AddCors(options =>
             "http://localhost:4200",
             "https://localhost:4200",
             "http://localhost:8100",
-            "https://localhost:8100"
+            "https://localhost:8100",
+            "https://pulse-connect3123.web.app"
         )
         .AllowAnyMethod()
         .AllowAnyHeader()
@@ -113,15 +114,14 @@ builder.Services.AddAuthentication(options =>
 
 // Database Configuration
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(
+    options.UseNpgsql(
         builder.Configuration.GetConnectionString("PulseConnectionString"),
-        sqlOptions => sqlOptions.EnableRetryOnFailure(
+        npgsqlOptions => npgsqlOptions.EnableRetryOnFailure(
             maxRetryCount: 5,
             maxRetryDelay: TimeSpan.FromSeconds(60),
-            errorNumbersToAdd: null
+            errorCodesToAdd: null
         )
     ));
-
 builder.Services.AddMemoryCache();
 
 builder.Services.AddControllers()

@@ -248,4 +248,6 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
     public DbSet<PostLike> PostLikes { get; set; }
 
     public DbSet<Notification> Notifications { get; set; }
+
+    public DbSet<BadgeEarning> BadgeEarnings { get; set; }
 }

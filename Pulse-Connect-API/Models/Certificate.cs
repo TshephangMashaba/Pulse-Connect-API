@@ -58,4 +58,15 @@ namespace Pulse_Connect_API.Models
         public User User { get; set; }
         public Certificate Certificate { get; set; }
     }
+
+    public class BadgeEarning
+    {
+        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public string UserId { get; set; }
+        public string BadgeId { get; set; }
+        public DateTime EarnedDate { get; set; }
+
+        // Navigation properties
+        public User User { get; set; }
+    }
 }
