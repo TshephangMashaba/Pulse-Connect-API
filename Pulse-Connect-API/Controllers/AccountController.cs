@@ -252,7 +252,6 @@ namespace Pulse_Connect_API.Controllers
         [HttpGet("profile")]
         public async Task<IActionResult> GetProfile()
         {
-            // Get user from the token claims
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (string.IsNullOrEmpty(userId))
                 return Unauthorized("Invalid or missing user ID in token");
@@ -267,17 +266,9 @@ namespace Pulse_Connect_API.Controllers
             string profilePhotoUrl = null;
             if (!string.IsNullOrEmpty(user.ProfilePicture))
             {
-                // If it's already a full URL, use as-is
-                if (user.ProfilePicture.StartsWith("http://") || user.ProfilePicture.StartsWith("https://"))
-                {
-                    profilePhotoUrl = user.ProfilePicture;
-                }
-                else
-                {
-                    // Build full URL for relative paths
-                    var cleanPath = user.ProfilePicture.StartsWith("/") ? user.ProfilePicture : $"/{user.ProfilePicture}";
-                    profilePhotoUrl = $"{Request.Scheme}://{Request.Host}{cleanPath}";
-                }
+                // Ensure the path starts with a slash
+                var cleanPath = user.ProfilePicture.StartsWith("/") ? user.ProfilePicture : $"/{user.ProfilePicture}";
+                profilePhotoUrl = $"{Request.Scheme}://{Request.Host}{cleanPath}";
             }
 
             return Ok(new
@@ -287,16 +278,16 @@ namespace Pulse_Connect_API.Controllers
                 user.LastName,
                 user.Email,
                 user.PhoneNumber,
-                user.DateOfBirth,
+                DateOfBirth = user.DateOfBirth?.ToString("yyyy-MM-dd"),
                 user.Address,
                 user.Race,
                 user.Gender,
-                ProfilePhoto = profilePhotoUrl, // Make sure this matches your frontend interface
+                ProfilePhoto = profilePhotoUrl, // This should match your frontend interface
                 Roles = roles
             });
         }
 
-        [Authorize]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [HttpPut("profile")]
         public async Task<IActionResult> UpdateProfile([FromForm] UpdateProfileDTO request)
         {
@@ -330,23 +321,31 @@ namespace Pulse_Connect_API.Controllers
                 }
 
                 // Update fields
-                user.FirstName = request.FirstName;
-                user.LastName = request.LastName;
-                user.PhoneNumber = string.IsNullOrEmpty(request.PhoneNumber) ? null : request.PhoneNumber;
+                user.FirstName = request.FirstName.Trim();
+                user.LastName = request.LastName.Trim();
+                user.PhoneNumber = string.IsNullOrEmpty(request.PhoneNumber) ? null : request.PhoneNumber.Trim();
 
-                // Parse DateOfBirth from string
-                if (!string.IsNullOrEmpty(request.DateOfBirth) && DateTime.TryParse(request.DateOfBirth, out var dateOfBirth))
+                // Handle DateOfBirth - accept null or empty
+                if (!string.IsNullOrEmpty(request.DateOfBirth))
                 {
-                    user.DateOfBirth = dateOfBirth;
+                    if (DateTime.TryParse(request.DateOfBirth, out var dateOfBirth))
+                    {
+                        user.DateOfBirth = dateOfBirth;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Warning: Could not parse DateOfBirth: {request.DateOfBirth}");
+                        user.DateOfBirth = null;
+                    }
                 }
                 else
                 {
                     user.DateOfBirth = null;
                 }
 
-                user.Address = string.IsNullOrEmpty(request.Address) ? null : request.Address;
-                user.Race = string.IsNullOrEmpty(request.Race) ? null : request.Race;
-                user.Gender = string.IsNullOrEmpty(request.Gender) ? null : request.Gender;
+                user.Address = string.IsNullOrEmpty(request.Address) ? null : request.Address.Trim();
+                user.Race = string.IsNullOrEmpty(request.Race) ? null : request.Race.Trim();
+                user.Gender = string.IsNullOrEmpty(request.Gender) ? null : request.Gender.Trim();
 
                 // Handle profile picture upload
                 if (request.ProfilePicture != null && request.ProfilePicture.Length > 0)
@@ -354,12 +353,12 @@ namespace Pulse_Connect_API.Controllers
                     Console.WriteLine($"Processing profile picture: {request.ProfilePicture.FileName}");
 
                     // Validate file type
-                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".jfif" };
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".jfif", ".webp" };
                     var fileExtension = Path.GetExtension(request.ProfilePicture.FileName).ToLower();
 
                     if (!allowedExtensions.Contains(fileExtension))
                     {
-                        return BadRequest(new { errors = new[] { "Invalid file type. Only JPG, JPEG, PNG, GIF, and JFIF are allowed." } });
+                        return BadRequest(new { errors = new[] { "Invalid file type. Only JPG, JPEG, PNG, GIF, JFIF, and WEBP are allowed." } });
                     }
 
                     // Validate file size (5MB)
@@ -371,10 +370,19 @@ namespace Pulse_Connect_API.Controllers
                     // Delete old profile picture if exists
                     if (!string.IsNullOrEmpty(user.ProfilePicture))
                     {
-                        var oldFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", user.ProfilePicture);
-                        if (System.IO.File.Exists(oldFilePath))
+                        try
                         {
-                            System.IO.File.Delete(oldFilePath);
+                            var oldFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", user.ProfilePicture.TrimStart('/'));
+                            if (System.IO.File.Exists(oldFilePath))
+                            {
+                                System.IO.File.Delete(oldFilePath);
+                                Console.WriteLine($"Deleted old profile picture: {oldFilePath}");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"Warning: Could not delete old profile picture: {ex.Message}");
+                            // Continue with update even if delete fails
                         }
                     }
 
@@ -383,9 +391,10 @@ namespace Pulse_Connect_API.Controllers
                     if (!Directory.Exists(uploadsFolder))
                     {
                         Directory.CreateDirectory(uploadsFolder);
+                        Console.WriteLine($"Created uploads directory: {uploadsFolder}");
                     }
 
-                    var uniqueFileName = $"{Guid.NewGuid()}_{Path.GetFileName(request.ProfilePicture.FileName)}";
+                    var uniqueFileName = $"{Guid.NewGuid()}{Path.GetExtension(request.ProfilePicture.FileName)}";
                     var filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
                     using (var fileStream = new FileStream(filePath, FileMode.Create))
@@ -393,8 +402,12 @@ namespace Pulse_Connect_API.Controllers
                         await request.ProfilePicture.CopyToAsync(fileStream);
                     }
 
-                    user.ProfilePicture = $"profile-pictures/{uniqueFileName}";
+                    user.ProfilePicture = $"/profile-pictures/{uniqueFileName}";
                     Console.WriteLine($"Profile picture saved: {user.ProfilePicture}");
+                }
+                else
+                {
+                    Console.WriteLine("No profile picture provided, keeping existing one");
                 }
 
                 var result = await _userManager.UpdateAsync(user);
@@ -407,11 +420,31 @@ namespace Pulse_Connect_API.Controllers
                 }
 
                 Console.WriteLine("Profile updated successfully");
+
+                // Build the full profile picture URL for response
+                string profilePictureUrl = null;
+                if (!string.IsNullOrEmpty(user.ProfilePicture))
+                {
+                    profilePictureUrl = $"{Request.Scheme}://{Request.Host}{user.ProfilePicture}";
+                }
+
                 return Ok(new
                 {
                     Message = "Profile updated successfully",
-                    ProfilePictureUrl = user.ProfilePicture != null ?
-                        $"{Request.Scheme}://{Request.Host}/{user.ProfilePicture}" : null
+                    ProfilePictureUrl = profilePictureUrl,
+                    User = new
+                    {
+                        user.Id,
+                        user.FirstName,
+                        user.LastName,
+                        user.Email,
+                        user.PhoneNumber,
+                        DateOfBirth = user.DateOfBirth?.ToString("yyyy-MM-dd"),
+                        user.Address,
+                        user.Race,
+                        user.Gender,
+                        ProfilePhoto = profilePictureUrl
+                    }
                 });
             }
             catch (Exception ex)

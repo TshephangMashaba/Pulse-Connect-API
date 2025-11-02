@@ -244,7 +244,7 @@ public class AppDbContext : IdentityDbContext<User, Role, string>
 
     public DbSet<CertificateShare> CertificateShares { get; set; }
 
-
+    public DbSet<ContactSubmission> ContactSubmissions { get; set; }
     public DbSet<PostLike> PostLikes { get; set; }
 
     public DbSet<Notification> Notifications { get; set; }
